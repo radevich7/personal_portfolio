@@ -3,12 +3,13 @@ import Link from "next/link";
 
 const Navigation = () => {
   return (
-    <div className={styles.navigation}>
-      asds
-      {/* <div className="navigation__logo">
-        <span className="navigation__logo--element">JR</span>
+    <div className={styles.nav}>
+      <div className={styles.nav__logo}>
+        <span className={styles.nav__logo__element1}>J</span>
+        <span className={styles.nav__logo__element2}>Julian</span>
+        <span className={styles.nav__logo__element3}>Web Developer</span>
       </div>
-      <nav className="navigation__nav">
+      <nav className={styles.navigation}>
         <ul className="navigation__list">
           <li className="navigation__item">
             <Link href="#1" className="navigation__link">
@@ -32,7 +33,7 @@ const Navigation = () => {
             </Link>
           </li>
         </ul>
-      </nav> */}
+      </nav>
     </div>
   );
 };

@@ -1,7 +1,45 @@
-.navigation {
+// Navigation panel
+.nav {
   height: 100vh;
   position: fixed;
   width: 16rem;
+  background-color: var(--color-primary-medium);
   top: 0;
   left: 0;
+
+  // LOGO CONTAINER
+  &__logo {
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    background-color: var(--color-primary-dark);
+    // Logo
+    &__element1 {
+      font-size: 8rem;
+      font-weight: 700;
+      color: var(--color-secondary-light);
+      position: relative;
+
+      &::after {
+        content: "J";
+        color: var(--color-tertiary-light);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(4px);
+        // z-index: -1;
+      }
+      // Name
+      &__element2 {
+      }
+      // Position
+      &__element3 {
+      }
+    }
+  }
 }
+// --color-secondary-light: #aefeff;
+//   --color-secondary-medium: #4fbdba;
+//   --color-secondary-dark: #35858b;
