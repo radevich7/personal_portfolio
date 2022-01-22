@@ -1,6 +1,49 @@
 @import "./sass/animations";
-@import "./sass/base";
 @import "./sass/mixins";
 @import "./sass/typography";
 @import "./sass/utilities";
-@import "./sass/variables";
+
+// BASE SETUP
+
+:root {
+  // VARIABLES
+
+  --color-primary: #072227;
+  --color-secondary-light: #aefeff;
+  --color-secondary-medium: #4fbdba;
+  --color-secondary-dark: #35858b;
+  --color-white: #fff;
+  --color-black: #000;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%; //1rem = 10px; 10px/16px=62.5%
+  box-sizing: border-box;
+
+  //   @include respond(tab-land) {
+  //     //width <1200
+  //     font-size: 56.25%; //1rem=9px. 9/16=56.35%
+  //   }
+  //   @include respond(tab-port) {
+  //     //width <900
+  //     font-size: 50%; //1rem=8px. 8/16=50%
+  //   }
+
+  //   @include respond(big-desktop) {
+  //     font-size: 75%; //1rem=12px, 12/16=75%
+  //   }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: var(--color-primary);
+}

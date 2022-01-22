@@ -1,5 +1,3 @@
-@import "../../styles/main.scss";
-
 .hello {
-  color: $color-secondary-light;
+  color: var(--color-secondary-light);
 }
