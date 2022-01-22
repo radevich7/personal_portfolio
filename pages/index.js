@@ -1,7 +1,6 @@
-// import "./global.css";
-// import
-// const HomePage = () => {
-//   return <h1>Home page</h1>;
-// };
+import Header from "../components/header/Header";
+const HomePage = () => {
+  return <Header />;
+};
 
-// export default HomePage;
+export default HomePage;
