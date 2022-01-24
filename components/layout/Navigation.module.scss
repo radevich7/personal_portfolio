@@ -9,18 +9,19 @@
 
   // LOGO CONTAINER
   &__logo {
-    height: 18rem;
     display: flex;
     flex-direction: column;
 
     align-items: center;
     background-color: var(--color-primary-dark);
+
     // Logo
     &__element1 {
-      font-size: 8rem;
+      font-size: 10rem;
       font-weight: 700;
       color: var(--color-secondary-light);
       position: relative;
+      cursor: pointer;
 
       &::after {
         content: "J";
@@ -29,17 +30,22 @@
         top: 0;
         left: 0;
         transform: translateX(4px);
-        // z-index: -1;
       }
       // Name
-      &__element2 {
-      }
-      // Position
-      &__element3 {
-      }
+    }
+    &__element2 {
+      font-size: 2rem;
+      font-weight: 900;
+      margin-top: -3.5rem;
+      margin-bottom: 0.5rem;
+    }
+    // Position
+    &__element3 {
+      color: var(--color-quaternary-light);
+      margin-bottom: 2rem;
     }
   }
+  &__navigation {
+    color: var(--color-quaternary-light);
+  }
 }
-// --color-secondary-light: #aefeff;
-//   --color-secondary-medium: #4fbdba;
-//   --color-secondary-dark: #35858b;

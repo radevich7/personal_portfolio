@@ -5,7 +5,9 @@ const Navigation = () => {
   return (
     <div className={styles.nav}>
       <div className={styles.nav__logo}>
-        <span className={styles.nav__logo__element1}>J</span>
+        <Link href="/">
+          <span className={styles.nav__logo__element1}>J</span>
+        </Link>
         <span className={styles.nav__logo__element2}>Julian</span>
         <span className={styles.nav__logo__element3}>Web Developer</span>
       </div>
@@ -13,23 +15,23 @@ const Navigation = () => {
         <ul className="navigation__list">
           <li className="navigation__item">
             <Link href="#1" className="navigation__link">
-              <a> About</a>
+              About
             </Link>
           </li>
           <li className="navigation__item">
             <Link href="#2" className="navigation__link">
-              <a> My skills</a>
+              My skills
             </Link>
           </li>
 
           <li className="navigation__item">
             <Link href="#4" className="navigation__link">
-              <a> Contact</a>
+              Contact
             </Link>
           </li>
           <li className="navigation__item">
             <Link href="#5" className="navigation__link">
-              <a>Follow up links</a>
+              Follow up links
             </Link>
           </li>
         </ul>
