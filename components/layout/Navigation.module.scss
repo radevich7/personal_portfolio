@@ -22,6 +22,7 @@
       color: var(--color-secondary-light);
       position: relative;
       cursor: pointer;
+      text-decoration: none;
 
       &::after {
         content: "J";
@@ -34,7 +35,7 @@
       // Name
     }
     &__element2 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: 900;
       margin-top: -3.5rem;
       margin-bottom: 0.5rem;
@@ -42,10 +43,47 @@
     // Position
     &__element3 {
       color: var(--color-quaternary-light);
+      font-size: 1.4rem;
       margin-bottom: 2rem;
     }
   }
-  &__navigation {
+
+  // LINKS
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    margin-top: 8rem;
     color: var(--color-quaternary-light);
+
+    &__item {
+      width: 100%;
+      text-align: center;
+      border-top: 1px solid rgba(174, 254, 255, 0.1);
+      padding: 1.2rem;
+      &:last-child {
+        border-bottom: 1px solid rgba(174, 254, 255, 0.1);
+      }
+    }
+    &__link {
+      &:link,
+      &:visited {
+        display: inline-block;
+        font-size: 2.2rem;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.2s;
+      }
+
+      &:hover,
+      &:active {
+        transform: scale(1.1);
+        color: var(--color-secondary-light);
+      }
+    }
   }
 }
