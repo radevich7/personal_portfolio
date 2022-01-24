@@ -11,7 +11,6 @@
   &__logo {
     display: flex;
     flex-direction: column;
-
     align-items: center;
     background-color: var(--color-primary-dark);
 
@@ -44,7 +43,7 @@
     &__element3 {
       color: var(--color-quaternary-light);
       font-size: 1.4rem;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
   }
 
@@ -54,8 +53,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
     width: 100%;
+
     list-style: none;
     margin-top: 8rem;
     color: var(--color-quaternary-light);
@@ -79,6 +78,25 @@
         transition: all 0.2s;
       }
 
+      &:hover,
+      &:active {
+        transform: scale(1.1);
+        color: var(--color-secondary-light);
+      }
+    }
+  }
+  &__social {
+    margin-top: 10rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+    &__link {
+      &:link,
+      &:visited {
+        font-size: 2.2rem;
+        color: var(--color-quaternary-light);
+      }
       &:hover,
       &:active {
         transform: scale(1.1);
