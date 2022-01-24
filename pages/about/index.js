@@ -1,10 +1,5 @@
-import styles from "./about.module.scss";
-
-// Components
-import Header from "../../components/header/Header";
-
 const About = () => {
-  return <Header />;
+  return <div></div>;
 };
 
 export default About;

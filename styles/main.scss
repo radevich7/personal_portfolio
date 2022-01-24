@@ -15,10 +15,9 @@
   --color-secondary-light: #aefeff;
   --color-secondary-medium: #4fbdba;
   --color-secondary-dark: #35858b;
+  --color-secondary-darker: #208294;
 
   --color-tertiary-light: #f42055;
-
-  --color-quaternary-light: #208294;
 
   --color-white: #fff;
   --color-black: #000;
@@ -50,7 +49,7 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 1.6;
   background-color: var(--color-primary-light);
