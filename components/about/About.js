@@ -9,8 +9,21 @@ import { FaSwimmer } from "react-icons/fa";
 import { MdOutlineCardTravel } from "react-icons/md";
 import { BiMoviePlay } from "react-icons/bi";
 import { GiFishingHook } from "react-icons/gi";
+import AboutPersonal from "../reusableComponents/AboutPersonal";
 
 const About = () => {
+  const languages = [
+    { name: "English", text: "fluent" },
+    { name: "Ukrainian", text: "fluent" },
+    { name: "Russian", text: "fluent" },
+  ];
+  const interests = [
+    { name: <FaHeadphones />, text: "Music" },
+    { name: <MdOutlineCardTravel />, text: "Travel" },
+    { name: <BiMoviePlay />, text: "Movies" },
+    { name: <GiFishingHook />, text: "Fishing" },
+  ];
+
   return (
     <section className={styles.about}>
       <div className={styles.about__zone}>
@@ -31,43 +44,10 @@ const About = () => {
         </div>
       </div>
       <div className={styles.about__personal}>
-        <div className={styles.about__education}></div>
-        <div className={styles.about__languages}></div>
-        <div className={styles.about__personal__interests}>
-          <h3>My interests:</h3>
-          <div className={styles.about__interests__container}>
-            <span className={styles.about__interests__icon}>
-              <FaHeadphones />
-              <span className={styles.about__interests__icon__text}>Music</span>
-            </span>
-
-            <span className={styles.about__interests__icon}>
-              <MdOutlineCardTravel />
-              <span className={styles.about__interests__icon__text}>
-                Travel
-              </span>
-            </span>
-            <span className={styles.about__interests__icon}>
-              <BiMoviePlay />{" "}
-              <span className={styles.about__interests__icon__text}>
-                Movies
-              </span>
-            </span>
-            <span className={styles.about__interests__icon}>
-              <GiFishingHook />{" "}
-              <span className={styles.about__interests__icon__text}>
-                Fishing
-              </span>
-            </span>
-
-            <span className={styles.about__interests__icon}>
-              <FaSwimmer />{" "}
-              <span className={styles.about__interests__icon__text}>
-                Swimming
-              </span>
-            </span>
-          </div>
-        </div>
+        {/* Languages */}
+        <AboutPersonal items={languages} title={"Languages"} />
+        {/* Personal interests */}
+        <AboutPersonal items={interests} title={"Interests"} />
       </div>
     </section>
   );

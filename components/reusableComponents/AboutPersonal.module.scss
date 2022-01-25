@@ -1,0 +1,32 @@
+.personal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+  &__heading {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--color-secondary-dark);
+    // margin-bottom: 2rem;
+    text-align: center;
+  }
+  &__container {
+    display: flex;
+    //   align-items: center;
+  }
+  &__icon {
+    font-size: 3rem;
+    color: var(--color-secondary-dark);
+    display: flex;
+    padding: 1rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__text {
+    font-size: 2rem;
+    color: var(--color-white);
+    margin-left: 1rem;
+  }
+}
