@@ -1,0 +1,54 @@
+.about {
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  //   About me
+  &__heading {
+    font-size: 4rem;
+  }
+  &__introduction {
+    font-size: 1.2rem;
+    width: 50%;
+  }
+  //   Section with a photo and the detailed explanation
+  &__zone {
+    // width: 90%;
+
+    display: flex;
+    &__photo {
+      width: 20rem;
+      height: 20rem;
+      background-image: url("../../../../../IMG_9675-removebg-preview.jpeg");
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: cover; /* Resize the background image to cover the entire container */
+      align-self: center;
+    }
+    &__text {
+      width: 45%;
+      padding: 0 5rem;
+      h2 {
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        color: var(--color-tertiary-light);
+      }
+      h4 {
+        font-size: 2.2rem;
+        font-weight: 300;
+      }
+      p {
+        font-size: 1.6rem;
+        color: var(--color-secondary-dark);
+        margin: 2.5rem 0;
+      }
+    }
+  }
+
+  //   Interests
+  &__interests {
+  }
+}

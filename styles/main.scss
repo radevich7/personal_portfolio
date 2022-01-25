@@ -1,5 +1,6 @@
 @import "./sass/mixins";
 @import "./sass/utilities";
+@import "./sass/typography";
 
 // BASE SETUP
 // // // // // // // // // // //
@@ -54,8 +55,4 @@ body {
   background-color: var(--color-primary-light);
   min-height: 100vh;
   color: var(--color-white);
-}
-
-@media (max-width: 75em) {
-  //600px/16
 }
