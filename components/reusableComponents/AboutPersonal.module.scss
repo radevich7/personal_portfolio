@@ -29,4 +29,14 @@
     color: var(--color-white);
     margin-left: 1rem;
   }
+  &__lang {
+    font-size: 2rem;
+    color: var(--color-secondary-dark);
+    display: flex;
+    padding: 1rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

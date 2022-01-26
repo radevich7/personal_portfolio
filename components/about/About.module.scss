@@ -43,4 +43,36 @@
       }
     }
   }
+
+  &__education {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &__main {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.8rem;
+      span {
+        color: var(--color-secondary-dark);
+      }
+    }
+
+    &__dates {
+    }
+  }
 }
+
+// font-size: 3rem;
+//     color: var(--color-secondary-dark);
+//     display: flex;
+//     padding: 1rem;
+//     font-weight: 300;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
+//   &__text {
+//     font-size: 2rem;
+//     color: var(--color-white);
+//     margin-left: 1rem;
+//   }

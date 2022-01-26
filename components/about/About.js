@@ -43,11 +43,21 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className={styles.about__personal}>
+      <div>
+        <div className={styles.about__education}>
+          <div className={styles.about__education__main}>
+            <span>Front-End Developer Program</span>
+            <span>Launchpad by VOG</span>
+            <span>Calgary, AB </span>
+          </div>
+          <span className={styles.about__education__dates}>
+            09/2021 -01/2022
+          </span>
+        </div>
         {/* Languages */}
         <AboutPersonal items={languages} title={"Languages"} />
         {/* Personal interests */}
-        <AboutPersonal items={interests} title={"Interests"} />
+        <AboutPersonal items={interests} title={"Interests"} style={true} />
       </div>
     </section>
   );
