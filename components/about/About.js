@@ -2,14 +2,14 @@ import Button from "../reusableComponents/Button";
 import styles from "./About.module.scss";
 import Link from "next/link";
 import LinkButton from "../reusableComponents/LinkButton";
+import AboutPersonal from "../reusableComponents/AboutPersonal";
 
 // icons
 import { FaHeadphones } from "react-icons/fa";
-import { FaSwimmer } from "react-icons/fa";
 import { MdOutlineCardTravel } from "react-icons/md";
 import { BiMoviePlay } from "react-icons/bi";
 import { GiFishingHook } from "react-icons/gi";
-import AboutPersonal from "../reusableComponents/AboutPersonal";
+import { IoSchoolSharp } from "react-icons/io5";
 
 const About = () => {
   const languages = [
@@ -26,6 +26,7 @@ const About = () => {
 
   return (
     <section className={styles.about}>
+      {/* Left col */}
       <div className={styles.about__zone}>
         <h1 className={styles.about__zone__heading}>About me</h1>
         <div className={styles.about__zone__photo}></div>
@@ -43,16 +44,41 @@ const About = () => {
           </p>
         </div>
       </div>
+      {/* Right col */}
       <div>
+        {/* Education */}
         <div className={styles.about__education}>
+          <h3 className={styles.about__education__heading}>Education</h3>
           <div className={styles.about__education__main}>
-            <span>Front-End Developer Program</span>
-            <span>Launchpad by VOG</span>
-            <span>Calgary, AB </span>
+            <div>
+              <span>Front-End Developer Program</span>
+              <span>Launchpad by VOG</span>
+              <span>Calgary, AB </span>
+            </div>
+            <span className={styles.about__education__dates}>
+              09/2021 -01/2022
+            </span>
           </div>
-          <span className={styles.about__education__dates}>
-            09/2021 -01/2022
-          </span>
+          <div className={styles.about__education__main}>
+            <div>
+              <span>Web Development Course</span>
+              <span>Juno College of Technology</span>
+              <span>Toronto, ON </span>
+            </div>
+            <span className={styles.about__education__dates}>
+              02/2021 -04/2021
+            </span>
+          </div>
+          <div className={styles.about__education__main}>
+            <div>
+              <span>BS, Mechanical Engineering</span>
+              <span>National Transport University</span>
+              <span>Kyiv, Ukraine </span>
+            </div>
+            <span className={styles.about__education__dates}>
+              09/2007 -06/2011
+            </span>
+          </div>
         </div>
         {/* Languages */}
         <AboutPersonal items={languages} title={"Languages"} />
