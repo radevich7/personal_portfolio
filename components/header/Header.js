@@ -2,15 +2,37 @@ import styles from "./Header.module.scss";
 import Button from "../reusableComponents/Button";
 
 const Header = () => {
+  let hello = "Hello,";
+  let me = `I'm`;
+  let firstName = "ulian ";
+  let lastName = "Radevych";
+  let position = "web developer";
+
   return (
     <header className={styles.header}>
       <div className={styles.header__main}>
-        <h1>Hello, </h1>
         <h1>
-          I'm <span className={styles.header__main__special}>J</span>ulian
-          Radevych,
+          {[...hello].map((val) => (
+            <span>{val}</span>
+          ))}
         </h1>
-        <h1>web developer</h1>
+        <h1>
+          {[...me].map((val) => (
+            <span>{val}</span>
+          ))}{" "}
+          <span className={styles.header__main__special}>J</span>
+          {[...firstName].map((val) => (
+            <span>{val}</span>
+          ))}
+          {[...lastName].map((val) => (
+            <span>{val}</span>
+          ))}
+        </h1>
+        <h1>
+          {[...position].map((val) => (
+            <span>{val}</span>
+          ))}
+        </h1>
         <Button>Contact me</Button>
         <span className={styles.header__quote}>
           “The future belongs to those who believe in the beauty of their

@@ -50,6 +50,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 2rem;
 
     &__main {
       display: flex;
@@ -57,7 +58,7 @@
       flex-direction: row;
       justify-content: space-around;
       font-size: 1.8rem;
-      padding: 2rem;
+      padding: 1rem;
       div {
         display: flex;
         flex-direction: column;

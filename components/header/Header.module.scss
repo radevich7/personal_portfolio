@@ -19,6 +19,15 @@
           margin-left: 2rem;
         }
       }
+      span {
+        display: inline-block;
+        white-space: pre-wrap;
+      }
+      span:hover {
+        color: var(--color-secondary-light);
+        transform: translateX(4px);
+        animation: bounce 0.9s infinite;
+      }
     }
     &__special {
       position: relative;
@@ -73,5 +82,22 @@
     position: absolute;
 
     right: -10rem;
+  }
+}
+
+// Bounce animation effect
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
   }
 }
