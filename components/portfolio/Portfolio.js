@@ -13,46 +13,45 @@ const Portfolio = () => {
         <li className={styles.portfolio__item__1}>
           <img
             className={styles.portfolio__image}
-            src="/MKTFY.png"
+            src="/projectNexter1.png"
             alt="Picture of the project 1"
           />
         </li>
         <li className={styles.portfolio__item__2}>
           <img
             className={styles.portfolio__image}
-            src="/MKTFY.png"
-            alt="Picture of the project 1"
+            src="/projectMapty.png"
+            alt="Picture of the project 2"
           />
         </li>
         <li className={styles.portfolio__item__3}>
           <img
             className={styles.portfolio__image}
             src="/MKTFY.png"
-            alt="Picture of the project 1"
+            alt="Picture of the project 3"
           />
         </li>
         <li className={styles.portfolio__item__4}>
-          {" "}
           <img
             className={styles.portfolio__image}
-            src="/MKTFY.png"
-            alt="Picture of the project 1"
+            src="/projectFood.png"
+            alt="Picture of the project 4"
           />
         </li>
         <li className={styles.portfolio__item__5}>
           {" "}
           <img
             className={styles.portfolio__image}
-            src="/MKTFY.png"
-            alt="Picture of the project 1"
+            src="/projectNatour.png"
+            alt="Picture of the project 5"
           />
         </li>
         <li className={styles.portfolio__item__6}>
           {" "}
           <img
             className={styles.portfolio__image}
-            src="/MKTFY.png"
-            alt="Picture of the project 1"
+            src="/projectNext.png"
+            alt="Picture of the project 6"
           />
         </li>
       </ul>

@@ -1,7 +1,22 @@
 .portfolio {
   height: 100vh;
-  // padding-top: 8rem;
   padding: 20rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+
+  h2 {
+    font-size: 7rem;
+    filter: brightness(90%);
+  }
+
+  p {
+    color: var(--color-tertiary-light);
+    font-size: 2rem;
+  }
 
   &__container {
     list-style: none;
@@ -21,13 +36,5 @@
   }
   &__item__2 {
     grid-column: 3 / 5;
-  }
-  &__item__3 {
-  }
-  &__item__4 {
-  }
-  &__item__5 {
-  }
-  &__item__6 {
   }
 }
