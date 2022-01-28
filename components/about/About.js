@@ -27,8 +27,8 @@ const About = () => {
   return (
     <section className={styles.about}>
       {/* Left col */}
+      <h1 className={styles.about__zone__heading}>About me</h1>
       <div className={styles.about__zone}>
-        <h1 className={styles.about__zone__heading}>About me</h1>
         <div className={styles.about__zone__photo}></div>
         <div className={styles.about__zone__text}>
           <h2>Julian Radevych</h2>
