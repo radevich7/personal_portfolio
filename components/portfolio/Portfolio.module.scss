@@ -1,3 +1,5 @@
+@import "../../styles/sass/mixins";
+
 .portfolio {
   height: 100vh;
   padding: 5rem;
@@ -19,69 +21,82 @@
 
   &__container {
     list-style: none;
+    width: 100%;
     display: grid;
     padding: 5rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 15vw 15vw;
     grid-gap: 1.5rem;
   }
-  &__image {
+  // // // // // // // // // video
+
+  &__hoverContent {
+    cursor: pointer;
+  }
+  &__hoverContent:hover &__video {
+    display: inline-block;
+  }
+
+  &__video {
+    display: none;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    display: block;
+    z-index: 3;
+    transition: all 0.6s;
+    position: relative;
+    z-index: 100;
+    opacity: 1;
+    &__content {
+      height: 100%;
+      width: 100%;
+    }
+
+    &:hover {
+      transform: scale(1.4);
+    }
+
+    &:hover &__link {
+      transform: scale(1.4);
+    }
 
     &__link {
-      &:link,
-      &:visited {
-        font-size: 1.2rem;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        color: var(--color-secondary-darker);
-        transition: all 0.4s;
-        background-color: rgb(0, 0, 0, 0.5);
-      }
-
-      &:hover,
-      &:active {
-        background-color: rgb(0, 0, 0, 0.2);
-      }
-
-      span {
-        background-color: var(--color-secondary-light);
-        width: 8rem;
-        height: 8rem;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.2s;
-        transform: scale(0);
-      }
-      &:hover span {
-        transform: scale(1);
-      }
-      &:active span {
-        transform: scale(0.9);
+      color: var(--color-white);
+      font-size: 2rem;
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 10000;
+      :hover {
+        color: var(--color-secondary-dark);
       }
     }
   }
-  &__image__link:hover &__image {
-    transform: scale(1.1);
-  }
+
+  // // // // // // // // //
 
   &__item__1 {
-    grid-column: 1 / 3;
+    @include portfolioBackground;
+    background-image: url("../../public/projectFood.png");
   }
   &__item__2 {
-    grid-column: 3 / 5;
+    @include portfolioBackground;
+    background-image: url("../../public/projectMapty.png");
+  }
+  &__item__3 {
+    background-image: url("../../public/MKTFY.png");
+    @include portfolioBackground;
+  }
+  &__item__4 {
+    background-image: url("../../public/projectNexter1.png");
+    @include portfolioBackground;
+  }
+  &__item__5 {
+    background-image: url("../../public/projectNatour.png");
+    @include portfolioBackground;
+  }
+  &__item__6 {
+    background-image: url("../../public/projectNext.png");
+    @include portfolioBackground;
   }
 
   &__hoverContent {
