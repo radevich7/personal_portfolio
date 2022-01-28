@@ -24,7 +24,7 @@ const Portfolio = () => {
       </p>
       <ul className={styles.portfolio__container}>
         {projects.map((item) => (
-          <PortfolioItem project={item} />
+          <PortfolioItem project={item} key={item.id} />
         ))}
       </ul>
     </section>
