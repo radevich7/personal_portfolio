@@ -1,126 +1,31 @@
 import styles from "./Portfolio.module.scss";
 import Link from "next/link";
 import { FaArrowCircleRight } from "react-icons/fa";
+import PortfolioItem from "./PortfolioItem";
 
 const Portfolio = () => {
+  // prettier-ignore
+  const projects = [
+    {id: 1, mp4: "reactMeals.mp4", webm: "reactMeals.webm", url: "/", style: styles.portfolio__item__1},
+    {id: 2, mp4: "mapty.mp4", webm: "mapty.webm",url: "/", style: styles.portfolio__item__2},
+    {id: 3, mp4: "mktfy.mp4", webm: "mktfy.webm", url: "/", style: styles.portfolio__item__3},
+    {id: 4, mp4: "nexter.mp4", webm: "nexter.webm", url: "/", style: styles.portfolio__item__4},
+    {id: 5, mp4: "natours.mp4", webm: "natours.webm", url: "/", style: styles.portfolio__item__5},
+    {id: 6, mp4: "meetups.mp4", webm: "meetups.webm", url: "/", style: styles.portfolio__item__6},
+    {id: 7, mp4: "bankist.mp4", webm: "bankist.webm", url: "/", style: styles.portfolio__item__7},
+    {id: 8, mp4: "pigGame.mp4", webm: "pigGame.webm", url: "/", style: styles.portfolio__item__8},
+  ];
+
   return (
     <section className={styles.portfolio}>
       <h2>Portfolio</h2>
       <p>
         Below you can see some of my projects, that I've been working lately
       </p>
-
       <ul className={styles.portfolio__container}>
-        <li className={styles.portfolio__item__1}>
-          <div className={styles.portfolio__hoverContent}>
-            <div className={styles.portfolio__video}>
-              <video
-                className={styles.portfolio__video__content}
-                loop
-                autoPlay
-                muted
-              >
-                <source src="reactMeals.webm" type="video/webm" />
-                <source src="reactMeals.mp4" type="video/mp4" />
-              </video>
-              <Link href="/">
-                <a className={styles.portfolio__video__link}>
-                  <FaArrowCircleRight />
-                </a>
-              </Link>
-            </div>
-          </div>
-        </li>
-        <li className={styles.portfolio__item__2}>
-          <div className={styles.portfolio__hoverContent}>
-            <div className={styles.portfolio__video}>
-              <video
-                className={styles.portfolio__video__content}
-                loop
-                autoPlay
-                muted
-              >
-                <source src="mapty.webm" type="video/webm" />
-                <source src="mapty.mp4" type="video/mp4" />
-                Your browser is not supported!
-              </video>
-              <Link href="/">
-                <a className={styles.portfolio__video__link}>
-                  <FaArrowCircleRight />
-                </a>
-              </Link>
-            </div>
-          </div>
-        </li>
-        <li className={styles.portfolio__item__3}>
-          <div className={styles.portfolio__hoverContent}>
-            <div className={styles.portfolio__video}>
-              <video
-                className={styles.portfolio__video__content}
-                loop
-                autoPlay
-                muted
-              >
-                <source src="mktfy.webm" type="video/webm" />
-                <source src="mktfy.mp4" type="video/mp4" />
-                Your browser is not supported!
-              </video>
-              <Link href="/">
-                <a className={styles.portfolio__video__link}>
-                  <FaArrowCircleRight />
-                </a>
-              </Link>
-            </div>
-          </div>
-        </li>
-        <li className={styles.portfolio__item__4}>
-          <div className={styles.portfolio__hoverContent}>
-            <div className={styles.portfolio__video}>
-              <video
-                className={styles.portfolio__video__content}
-                loop
-                autoPlay
-                muted
-              >
-                <source src="nexter.mp4" type="video/mp4" />
-                <source src="nexter.webm" type="video/webm" />
-                Your browser is not supported!
-              </video>
-            </div>
-          </div>
-        </li>
-        <li className={styles.portfolio__item__5}>
-          <div className={styles.portfolio__hoverContent}>
-            <div className={styles.portfolio__video}>
-              <video
-                className={styles.portfolio__video__content}
-                loop
-                autoPlay
-                muted
-              >
-                <source src="natours.mp4" type="video/mp4" />
-                <source src="natours.webm" type="video/webm" />
-                Your browser is not supported!
-              </video>
-            </div>
-          </div>
-        </li>
-        <li className={styles.portfolio__item__6}>
-          <div className={styles.portfolio__hoverContent}>
-            <div className={styles.portfolio__video}>
-              <video
-                className={styles.portfolio__video__content}
-                loop
-                autoPlay
-                muted
-              >
-                <source src="meetups.mp4" type="video/mp4" />
-                <source src="meetups.webm" type="video/webm" />
-                Your browser is not supported!
-              </video>
-            </div>
-          </div>
-        </li>
+        {projects.map((item) => (
+          <PortfolioItem project={item} />
+        ))}
       </ul>
     </section>
   );

@@ -26,7 +26,9 @@
     padding: 5rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 15vw 15vw;
-    grid-gap: 1.5rem;
+    grid-gap: 4rem;
+    grid-column-gap: 3rem;
+    grid-row-gap: 2rem;
   }
   // // // // // // // // // video
 
@@ -42,30 +44,33 @@
     width: 100%;
     height: 100%;
     z-index: 3;
-    transition: all 0.6s;
+    transition: all 0.1s;
+
     position: relative;
     z-index: 100;
-    opacity: 1;
+    overflow: hidden;
+    backface-visibility: hidden;
+
     &__content {
       height: 100%;
       width: 100%;
     }
 
     &:hover {
-      transform: scale(1.4);
-    }
-
-    &:hover &__link {
-      transform: scale(1.4);
+      transform: scale(1.6);
+      transition: transform 0.6s;
     }
 
     &__link {
-      color: var(--color-white);
+      color: var(--color-primary-dark);
       font-size: 2rem;
       position: absolute;
-      left: 0;
-      right: 0;
+      text-decoration: none;
+      right: 1rem;
+      bottom: 2rem;
+
       z-index: 10000;
+
       :hover {
         color: var(--color-secondary-dark);
       }
@@ -73,29 +78,69 @@
   }
 
   // // // // // // // // //
-
+  // linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../img/hero.jpeg);
   &__item__1 {
     @include portfolioBackground;
-    background-image: url("../../public/projectFood.png");
+    background-image: linear-gradient(
+        rgba(32, 130, 148, 0.2),
+        rgba(32, 130, 148, 0.2)
+      ),
+      url("../../public/projectFood.png");
   }
   &__item__2 {
     @include portfolioBackground;
-    background-image: url("../../public/projectMapty.png");
+    background-image: linear-gradient(
+        rgba(32, 130, 148, 0.2),
+        rgba(32, 130, 148, 0.2)
+      ),
+      url("../../public/projectMapty.png");
   }
   &__item__3 {
-    background-image: url("../../public/MKTFY.png");
+    background-image: linear-gradient(
+        rgba(32, 130, 148, 0.2),
+        rgba(32, 130, 148, 0.2)
+      ),
+      url("../../public/MKTFY.png");
     @include portfolioBackground;
   }
   &__item__4 {
-    background-image: url("../../public/projectNexter1.png");
+    background-image: linear-gradient(
+        rgba(32, 130, 148, 0.2),
+        rgba(32, 130, 148, 0.2)
+      ),
+      url("../../public/projectNexter1.png");
     @include portfolioBackground;
   }
   &__item__5 {
-    background-image: url("../../public/projectNatour.png");
+    background-image: linear-gradient(
+        rgba(32, 130, 148, 0.2),
+        rgba(32, 130, 148, 0.2)
+      ),
+      url("../../public/projectNatour.png");
     @include portfolioBackground;
   }
   &__item__6 {
-    background-image: url("../../public/projectNext.png");
+    background-image: linear-gradient(
+        rgba(32, 130, 148, 0.2),
+        rgba(32, 130, 148, 0.2)
+      ),
+      url("../../public/projectNext.png");
+    @include portfolioBackground;
+  }
+  &__item__7 {
+    background-image: linear-gradient(
+        rgba(32, 130, 148, 0.2),
+        rgba(32, 130, 148, 0.2)
+      ),
+      url("../../public/bankist.png");
+    @include portfolioBackground;
+  }
+  &__item__8 {
+    background-image: linear-gradient(
+        rgba(32, 130, 148, 0.2),
+        rgba(32, 130, 148, 0.2)
+      ),
+      url("../../public/pigGame.png");
     @include portfolioBackground;
   }
 
