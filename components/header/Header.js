@@ -39,6 +39,7 @@ const Header = () => {
           ))}
         </h1>
         <Button>Contact me</Button>
+
         <span className={styles.header__quote}>
           “The future belongs to those who believe in the beauty of their
           dreams.”—Eleanor Roosevelt.

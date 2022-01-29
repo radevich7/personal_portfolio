@@ -63,7 +63,7 @@
     }
 
     &__link {
-      color: var(--color-primary-dark);
+      color: var(--color-secondary-dark);
       font-size: 2rem;
       position: absolute;
       text-decoration: none;
@@ -73,8 +73,11 @@
       z-index: 10000;
 
       :hover {
-        color: var(--color-secondary-dark);
+        color: var(--color-tertiary-light);
       }
+    }
+
+    &__tech {
     }
   }
 

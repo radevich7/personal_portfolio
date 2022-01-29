@@ -45,7 +45,7 @@ const About = () => {
         </div>
       </div>
       {/* Right col */}
-      <div>
+      <div className={styles.about__rightContainer}>
         {/* Education */}
         <div className={styles.about__education}>
           <h3 className={styles.about__education__heading}>Education</h3>

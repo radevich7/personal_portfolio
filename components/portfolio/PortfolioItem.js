@@ -1,6 +1,7 @@
 import styles from "./Portfolio.module.scss";
 import Link from "next/link";
-import { GoLinkExternal } from "react-icons/go";
+import { FaExternalLinkSquareAlt } from "react-icons/fa";
+import { BsFillInfoSquareFill } from "react-icons/bs";
 
 const PortfolioItem = (props) => {
   return (
@@ -16,9 +17,10 @@ const PortfolioItem = (props) => {
             <source src={props.project.mp4} type="video/webm" />
             <source src={props.project.webm} type="video/mp4" />
           </video>
+
           <Link href={props.project.url}>
             <a className={styles.portfolio__video__link}>
-              <GoLinkExternal />
+              <FaExternalLinkSquareAlt />
             </a>
           </Link>
         </div>
