@@ -1,0 +1,38 @@
+@import "../../styles/sass/mixins";
+
+.skills {
+  height: 100vh;
+  margin: 0 auto;
+  padding: 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, min-content);
+
+  &__container {
+  }
+  &__heading {
+    @include heading-3;
+  }
+
+  &__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 2rem;
+    &__item {
+      width: 100%;
+      font-size: 3rem;
+      color: var(--color-secondary-dark);
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      justify-self: center;
+      align-items: center;
+      span {
+        font-size: 1rem;
+      }
+    }
+    &__icon {
+    }
+  }
+}

@@ -1,3 +1,25 @@
+// Typography
+
+@mixin heading-1 {
+  font-size: 6rem;
+  color: var(--color-white);
+  // line-height: 1;
+}
+
+@mixin heading-2 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin-top: 3rem;
+  color: var(--color-tertiary-light);
+}
+
+@mixin heading-3 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--color-secondary-dark);
+  text-align: center;
+}
+
 @mixin backgroundStructure {
   font-family: "Dancing Script", cursive;
   font-size: 1.8rem;
