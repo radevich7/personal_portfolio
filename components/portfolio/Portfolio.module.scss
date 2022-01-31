@@ -76,75 +76,74 @@
         color: var(--color-tertiary-light);
       }
     }
-
-    &__tech {
-    }
   }
 
   // // // // // // // // //
   // linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../img/hero.jpeg);
   &__item__1 {
-    @include portfolioBackground;
     background-image: linear-gradient(
-        rgba(32, 130, 148, 0.2),
-        rgba(32, 130, 148, 0.2)
+        rgba(29, 29, 29, 0.2),
+        rgba(29, 29, 29, 0.2)
       ),
-      url("../../public/projectFood.png");
+      url("../../public/mktfy.svg");
+    @include portfolioBackground;
   }
   &__item__2 {
     @include portfolioBackground;
     background-image: linear-gradient(
-        rgba(32, 130, 148, 0.2),
-        rgba(32, 130, 148, 0.2)
+        rgba(29, 29, 29, 0.2),
+        rgba(29, 29, 29, 0.2)
       ),
-      url("../../public/projectMapty.png");
+      url("../../public/reactMeals.svg");
   }
   &__item__3 {
     background-image: linear-gradient(
-        rgba(32, 130, 148, 0.2),
-        rgba(32, 130, 148, 0.2)
+        rgba(29, 29, 29, 0.2),
+        rgba(29, 29, 29, 0.2)
       ),
-      url("../../public/MKTFY.png");
+      url("../../public/nexter.svg");
     @include portfolioBackground;
   }
   &__item__4 {
-    background-image: linear-gradient(
-        rgba(32, 130, 148, 0.2),
-        rgba(32, 130, 148, 0.2)
-      ),
-      url("../../public/projectNexter1.png");
     @include portfolioBackground;
+    background-image: linear-gradient(
+        rgba(29, 29, 29, 0.2),
+        rgba(29, 29, 29, 0.2)
+      ),
+      url("../../public/mapty.svg");
   }
   &__item__5 {
     background-image: linear-gradient(
-        rgba(32, 130, 148, 0.2),
-        rgba(32, 130, 148, 0.2)
+        rgba(29, 29, 29, 0.2),
+        rgba(29, 29, 29, 0.2)
       ),
-      url("../../public/projectNatour.png");
+      url("../../public/bankist.svg");
     @include portfolioBackground;
   }
   &__item__6 {
     background-image: linear-gradient(
-        rgba(32, 130, 148, 0.2),
-        rgba(32, 130, 148, 0.2)
+        rgba(29, 29, 29, 0.2),
+        rgba(29, 29, 29, 0.2)
       ),
-      url("../../public/projectNext.png");
+      url("../../public/meetups.svg");
     @include portfolioBackground;
   }
+
   &__item__7 {
     background-image: linear-gradient(
-        rgba(32, 130, 148, 0.2),
-        rgba(32, 130, 148, 0.2)
+        rgba(29, 29, 29, 0.2),
+        rgba(29, 29, 29, 0.2)
       ),
-      url("../../public/bankist.png");
+      url("../../public/projectNatour.png");
     @include portfolioBackground;
   }
+
   &__item__8 {
     background-image: linear-gradient(
-        rgba(32, 130, 148, 0.2),
-        rgba(32, 130, 148, 0.2)
+        rgba(29, 29, 29, 0.2),
+        rgba(29, 29, 29, 0.2)
       ),
-      url("../../public/pigGame.png");
+      url("../../public/piggame.svg");
     @include portfolioBackground;
   }
 
