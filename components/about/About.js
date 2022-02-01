@@ -22,9 +22,9 @@ const About = () => {
       setAboutSection(ref.current.getBoundingClientRect().top);
     }
   }, []);
-  console.log(aboutSection);
+  // console.log(aboutSection);
   //
-  console.log(offsetY);
+  // console.log(offsetY);
   // const renderContent = () => <></>;
   return (
     <section className={styles.about}>

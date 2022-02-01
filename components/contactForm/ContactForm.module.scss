@@ -1,4 +1,131 @@
+@import "./../../styles/sass/mixins";
+
 .form {
   height: 100vh;
-  padding: 5rem;
+  padding: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__heading1 {
+    @include heading-3;
+    font-size: 6rem;
+    font-weight: 600;
+  }
+  &__heading2 {
+    @include heading-3;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    grid-column-gap: 3rem;
+    grid-row-gap: 2rem;
+    width: 70%;
+    margin-top: 5rem;
+    &__name {
+      grid-column: 1 /2;
+      grid-row: 1 /2;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    &__email {
+      grid-column: 2 /3;
+      grid-row: 1 /2;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    &__message {
+      grid-column: 1 /3;
+      grid-row: 2 /3;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    &__btnSubmit {
+      grid-column: 1 /3;
+      grid-row: 3 /-1;
+      align-self: center;
+      justify-self: center;
+
+      &,
+      &:link,
+      &:visited {
+        color: var(--color-secondary-light);
+        background-color: transparent;
+        position: relative;
+        text-decoration: none;
+        padding: 1rem 6rem;
+        display: inline-block;
+        border: 1px solid var(--color-secondary-light);
+        font-size: 1.5rem;
+        font-weight: 600;
+        cursor: pointer;
+        background-image: linear-gradient(
+          120deg,
+          transparent 0%,
+          transparent 50%,
+          var(--color-tertiary-light) 50%
+        );
+        background-size: 220%;
+        transition: all 0.4s;
+      }
+      &:hover {
+        background-position: 100%;
+        transform: translateY(-0.3rem);
+      }
+      &:active {
+        transform: translateY(-1px);
+      }
+    }
+  }
+
+  &__input,
+  &__textArea {
+    border: none;
+    padding: 1.5rem 0;
+    background-color: transparent;
+    border-bottom: 1px solid var(--color-secondary-dark);
+    color: var(--color-white);
+    font-size: 1.2rem;
+    resize: none;
+
+    &:focus {
+      outline: none;
+      outline-offset: none;
+      border-bottom: 1px solid var(--color-secondary-light);
+    }
+
+    &::placeholder {
+      color: var(--color-secondary-light);
+    }
+  }
+  &__label {
+    font-size: 1.2rem;
+    color: var(--color-secondary-dark);
+    font-weight: 500;
+    margin-top: 0.7rem;
+
+    display: block;
+    transition: all 0.3s;
+  }
+  &__input:placeholder-shown + &__label,
+  &__textArea:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+
+  &__error {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: var(--color-tertiary-light);
+  }
 }
