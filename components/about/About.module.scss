@@ -21,14 +21,14 @@
 
       &::before {
         @include backgroundStructure;
-        content: "< h1 >";
+        content: "< h2 >";
 
         position: absolute;
         top: -2rem;
       }
       &::after {
         @include backgroundStructure;
-        content: "</ h1 >";
+        content: "</ h2 >";
         position: absolute;
         left: 0;
         bottom: -2rem;
@@ -51,7 +51,7 @@
         display: inline-block;
         &::before {
           @include backgroundStructure;
-          content: "< h2 >";
+          content: "< h3 >";
 
           position: absolute;
           left: -3.5rem;
@@ -60,7 +60,7 @@
         }
         &::after {
           @include backgroundStructure;
-          content: "</ h2 >";
+          content: "</ h3 >";
           position: absolute;
           right: -9rem;
           top: 50%;
@@ -134,19 +134,12 @@
     position: relative;
     height: 100%;
     margin-top: 2vh;
-    // &::before {
-    //   @include backgroundStructure;
-    //   content: "< section >";
-    //   position: absolute;
-    //   top: 5rem;
-    // }
-    // &::after {
-    //   @include backgroundStructure;
-    //   content: "</ section >";
-    //   position: absolute;
-    //   right: 0;
-    //   bottom: 5rem;
-    // }
+    &::before {
+      @include backgroundStructure;
+      content: "< section >";
+      position: absolute;
+      top: 5rem;
+    }
   }
 }
 

@@ -31,11 +31,6 @@ const Navigation = () => {
             <a className={styles.nav__list__link}>Portfolio</a>
           </Link>
         </li>
-        <li className={styles.nav__list__item}>
-          <Link href="/resume">
-            <a className={styles.nav__list__link}>CV</a>
-          </Link>
-        </li>
 
         <li className={styles.nav__list__item}>
           <Link href="/contact">

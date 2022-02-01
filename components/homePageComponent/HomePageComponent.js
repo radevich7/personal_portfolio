@@ -11,8 +11,8 @@ const HomePageComponent = () => {
   return (
     <div>
       <Header />
-      <About />
       <Portfolio />
+      <About />
       <ContactForm />
     </div>
   );

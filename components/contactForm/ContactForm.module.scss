@@ -12,11 +12,43 @@
     @include heading-3;
     font-size: 6rem;
     font-weight: 600;
+    position: relative;
+    &::before {
+      @include backgroundStructure;
+      content: "< h2 >";
+      position: absolute;
+      top: 3.5rem;
+      left: -6rem;
+    }
+    &::after {
+      @include backgroundStructure;
+      content: "</ h2 >";
+      position: absolute;
+      position: absolute;
+      top: 3.5rem;
+      right: -6rem;
+    }
   }
   &__heading2 {
     @include heading-3;
     text-align: center;
     margin-top: 1rem;
+    position: relative;
+    &::before {
+      @include backgroundStructure;
+      content: "< h4 >";
+      position: absolute;
+      top: 0.5rem;
+      left: -6rem;
+    }
+    &::after {
+      @include backgroundStructure;
+      content: "</ h4 >";
+      position: absolute;
+      position: absolute;
+      top: 0.5rem;
+      right: -6rem;
+    }
   }
 
   &__container {
@@ -27,12 +59,28 @@
     grid-row-gap: 2rem;
     width: 70%;
     margin-top: 5rem;
+    position: relative;
+    &::after {
+      @include backgroundStructure;
+      content: "< form >";
+      position: absolute;
+      bottom: -2rem;
+      right: -10rem;
+    }
+
     &__name {
       grid-column: 1 /2;
       grid-row: 1 /2;
       display: flex;
       flex-direction: column;
       position: relative;
+      &::before {
+        @include backgroundStructure;
+        content: "< form >";
+        position: absolute;
+        top: -2rem;
+        left: -10rem;
+      }
     }
     &__email {
       grid-column: 2 /3;
