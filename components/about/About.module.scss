@@ -1,13 +1,12 @@
 @import "../../styles/sass/mixins";
 
 .about {
-  height: 100vh;
+  height: 165vh;
   margin: 0 auto;
-  padding: 5rem;
+  padding: 5rem 5rem 0 5rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, min-content);
-
   position: relative;
 
   //   About me
@@ -96,7 +95,11 @@
   }
 
   &__education {
-    margin-bottom: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
 
     &__main {
       display: flex;
@@ -105,6 +108,7 @@
       justify-content: space-around;
       font-size: 1.8rem;
       padding: 1rem;
+
       div {
         display: flex;
         flex-direction: column;
@@ -128,19 +132,29 @@
 
   &__rightContainer {
     position: relative;
-
-    &::before {
-      @include backgroundStructure;
-      content: "< section >";
-      position: absolute;
-    }
-    &::after {
-      @include backgroundStructure;
-      content: "</ section >";
-      position: absolute;
-
-      right: 0;
-      bottom: 0;
-    }
+    height: 100%;
+    margin-top: 2vh;
+    // &::before {
+    //   @include backgroundStructure;
+    //   content: "< section >";
+    //   position: absolute;
+    //   top: 5rem;
+    // }
+    // &::after {
+    //   @include backgroundStructure;
+    //   content: "</ section >";
+    //   position: absolute;
+    //   right: 0;
+    //   bottom: 5rem;
+    // }
   }
+}
+
+// Parallex
+
+.sticky {
+  position: sticky;
+  height: 100%;
+  top: 4vh;
+  left: 0;
 }
