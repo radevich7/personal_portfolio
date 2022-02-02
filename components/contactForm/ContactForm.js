@@ -1,11 +1,16 @@
 import styles from "./ContactForm.module.scss";
 import * as Yup from "yup";
-import { Formik, Form, useField, useFormikContext } from "formik";
-import Button from "../reusableComponents/Button";
+import { Formik, Form, useField } from "formik";
+import Swal from "sweetalert2";
+import emailjs from "emailjs-com";
+
+const SERVICE_ID = "service_5un9za6";
+const TEMPLATE_ID = "template_oj2w0pc";
+const USER_ID = "user_nL84NBjg7D93QkB4gd3oe";
 // Input
 const MyTextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
-  console.log(props);
+
   return (
     <>
       <input {...field} {...props} className={styles.form__input} />
@@ -34,6 +39,16 @@ const MyTextArea = ({ label, ...props }) => {
 };
 
 const ContactForm = () => {
+  const sendEmail = (data) => {
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, data, USER_ID).then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      function (error) {
+        console.log("FAILED...", error);
+      }
+    );
+  };
   return (
     <section className={styles.form}>
       <h1 className={styles.form__heading1}>Send me a message!</h1>
@@ -60,6 +75,7 @@ const ContactForm = () => {
         onSubmit={async (values, { setSubmitting, resetForm }) => {
           await new Promise((r) => setTimeout(r, 500));
           setSubmitting(false);
+          // sendEmail(values);
           console.log(values);
           resetForm({ values: "" });
         }}
