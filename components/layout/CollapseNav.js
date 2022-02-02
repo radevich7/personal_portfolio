@@ -1,6 +1,7 @@
-import styles from "./Navigation.module.scss";
-import Link from "next/link";
 import { useState } from "react";
+import styles from "./Navigation.module.scss";
+import NavLinks from "./NavLinks";
+
 const CollapseNav = () => {
   const [open, setOpen] = useState(false);
   const toggle = () => setOpen(!open);
@@ -38,37 +39,7 @@ const CollapseNav = () => {
           open && styles.toggleNav
         }`}
       >
-        <ul className={styles.nav__list}>
-          <li className={styles.nav__list__item}>
-            <Link href="/about">
-              <a className={styles.nav__list__link} onClick={toggle}>
-                About me
-              </a>
-            </Link>
-          </li>
-          <li className={styles.nav__list__item}>
-            <Link href="/skills">
-              <a className={styles.nav__list__link} onClick={toggle}>
-                Skills
-              </a>
-            </Link>
-          </li>
-          <li className={styles.nav__list__item}>
-            <Link href="/portfolio">
-              <a className={styles.nav__list__link} onClick={toggle}>
-                Portfolio
-              </a>
-            </Link>
-          </li>
-
-          <li className={styles.nav__list__item}>
-            <Link href="/contact">
-              <a className={styles.nav__list__link} onClick={toggle}>
-                Contact
-              </a>
-            </Link>
-          </li>
-        </ul>
+        <NavLinks toggle={toggle} />
       </nav>
     </div>
   );
