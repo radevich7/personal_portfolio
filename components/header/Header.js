@@ -38,13 +38,13 @@ const Header = () => {
             <span key={generateKey(val + index)}>{val}</span>
           ))}
         </h1>
-        <Button>Contact me</Button>
 
-        <span className={styles.header__quote}>
-          “The future belongs to those who believe in the beauty of their
-          dreams.”—Eleanor Roosevelt.
-        </span>
+        <Button>Contact me</Button>
       </div>
+      <span className={styles.header__quote}>
+        “The future belongs to those who believe in the beauty of their
+        dreams.”—Eleanor Roosevelt.
+      </span>
 
       {/* background structure of the html */}
       <div className={styles.back__scheme}>

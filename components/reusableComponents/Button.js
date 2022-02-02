@@ -3,9 +3,7 @@ import Link from "next/link";
 const Button = (props) => {
   return (
     <Link href="/">
-      <a className={`${styles.btn} ${`styles.${props.styles}`}`}>
-        {props.children}
-      </a>
+      <a className={styles.btn}>{props.children}</a>
     </Link>
   );
 };
