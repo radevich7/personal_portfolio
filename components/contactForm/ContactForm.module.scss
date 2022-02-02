@@ -166,6 +166,7 @@
   &__input:placeholder-shown + &__label,
   &__textArea:placeholder-shown + &__label {
     opacity: 0;
+
     visibility: hidden;
     transform: translateY(-4rem);
   }
@@ -176,4 +177,8 @@
     right: 0;
     color: var(--color-tertiary-light);
   }
+}
+
+.spinner {
+  margin-top: 6rem;
 }
