@@ -50,6 +50,10 @@ const Header = () => {
       <div className={styles.back__scheme}>
         <span className={styles.back__scheme__html}>&lt; html &gt;</span>
         <span className={styles.back__scheme__header}>&lt; header &gt;</span>
+        <span className={styles.back__scheme__body}>&lt; body &gt;</span>
+        <span className={styles.back__scheme__headerClose}>
+          &lt;/ header &gt;
+        </span>
       </div>
 
       {/* background structure of the html */}

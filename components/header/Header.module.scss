@@ -10,17 +10,18 @@
   justify-content: center;
 
   &__main {
-    padding-left: 5rem;
+    padding-left: 7rem;
     position: relative;
 
     h1 {
       font-size: 7rem;
       &:last-of-type {
         margin-bottom: 5rem;
+        position: relative;
         &::after {
           content: "</ h1 >";
           @include backgroundStructure;
-          margin-left: 2rem;
+          margin-left: 1.5rem;
         }
       }
       span {
@@ -79,6 +80,9 @@
     &::before {
       content: "< h1 >";
       @include backgroundStructure;
+      position: absolute;
+      top: 3.5rem;
+      left: 2.5rem;
     }
   }
   &__quote {
@@ -105,17 +109,25 @@
   @include backgroundStructure;
   &__html {
     position: absolute;
-    top: 3rem;
+    top: 1rem;
     left: 0;
+  }
+  &__body {
+    position: absolute;
+    top: 5rem;
+    left: 1rem;
   }
   &__header {
     position: absolute;
-    top: 10rem;
+    top: 9rem;
     left: 2rem;
   }
   &__headerClose {
     @include backgroundStructure;
-    transform: translateY(-100%, -100%);
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    // transform: translateY(-100%, -100%);
   }
 
   &__button {
