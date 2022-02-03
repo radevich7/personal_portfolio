@@ -11,15 +11,20 @@
   @include respond(tab-port) {
     align-items: center;
   }
+  @include respond(phone) {
+  }
 
   &__main {
     padding-left: 7rem;
     position: relative;
+    @include respond(phone) {
+      padding: 1rem;
+    }
 
     h1 {
       font-size: 7rem;
       @include respond(phone) {
-        // font-size: 4rem;
+        font-size: 4.5rem;
       }
       &:last-of-type {
         margin-bottom: 5rem;
@@ -86,13 +91,15 @@
     &::before {
       content: "< h1 >";
       @include backgroundStructure;
-      position: absolute;
+      // position: absolute;
+      // display: inline;
       top: 3.5rem;
       left: 2.5rem;
     }
   }
   &__quote {
     @include backgroundStructure;
+
     width: 95%;
     font-size: 3rem;
     display: block;
@@ -134,7 +141,6 @@
     position: absolute;
     bottom: 2rem;
     left: 2rem;
-    // transform: translateY(-100%, -100%);
   }
 
   &__button {

@@ -38,16 +38,12 @@
     &::before {
       content: "< p >";
       @include backgroundStructure;
-      position: absolute;
-      left: 2.5rem;
-      top: 0;
+      margin-right: 1rem;
     }
     &::after {
       content: "</ p >";
       @include backgroundStructure;
-      position: absolute;
-      right: -5.5rem;
-      top: 0;
+      margin-left: 1rem;
     }
   }
 

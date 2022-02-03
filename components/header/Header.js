@@ -38,7 +38,6 @@ const Header = () => {
             <span key={generateKey(val + index)}>{val}</span>
           ))}
         </h1>
-
         <Button>Contact me</Button>
       </div>
       <span className={styles.header__quote}>

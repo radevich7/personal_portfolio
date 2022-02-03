@@ -9,7 +9,7 @@
   row-gap: 4rem;
   @include respond(tab-land) {
     grid-template-rows: min-content 1fr 1fr;
-    row-gap: 5rem;
+    row-gap: 8rem;
   }
 
   &__heading {
@@ -60,15 +60,15 @@
         @include backgroundStructure;
         content: "< p >";
         position: absolute;
-        top: 0;
-        left: -5rem;
+        top: -4rem;
+        left: 0rem;
       }
       &::after {
         @include backgroundStructure;
         content: "</ p >";
         position: absolute;
-        bottom: 0;
-        right: -5rem;
+        bottom: -4rem;
+        right: 5rem;
       }
     }
   }
@@ -87,16 +87,16 @@
       @include backgroundStructure;
       content: "< ul >";
       position: absolute;
-      top: 0;
-      left: -5rem;
+      top: -4rem;
+      left: 0rem;
     }
     &::after {
       @include backgroundStructure;
       content: "</ ul >";
       position: absolute;
 
-      bottom: 0;
-      right: -5rem;
+      bottom: -4rem;
+      right: 5rem;
     }
   }
 
