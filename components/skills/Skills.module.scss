@@ -9,7 +9,6 @@
   &__list {
     list-style: none;
     display: grid;
-    padding: 0 7rem;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 2rem;
     position: relative;

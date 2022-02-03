@@ -64,7 +64,7 @@ const Education = React.forwardRef((props, ref) => {
         {/* Personal interests */}
         <AboutPersonal items={interests} title={"Interests"} style={true} />
       </div>
-      <SkillsList />
+      {/* <SkillsList /> */}
     </div>
   );
 });
