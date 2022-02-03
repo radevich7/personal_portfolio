@@ -50,12 +50,27 @@
 
   &__container {
     list-style: none;
+    position: relative;
     width: 100%;
     height: 100%;
     padding: 5rem 15rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 25rem 25rem;
+    &::before {
+      content: "< ul >";
+      @include backgroundStructure;
+      position: absolute;
+      top: 4rem;
+      left: 4rem;
+    }
+    &::after {
+      content: "</ ul >";
+      @include backgroundStructure;
+      position: absolute;
+      bottom: 4rem;
+      right: 4rem;
+    }
   }
 
   // video element

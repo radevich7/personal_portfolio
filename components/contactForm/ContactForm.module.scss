@@ -18,6 +18,21 @@
     background-repeat: no-repeat;
     grid-column: 7 / 10;
     position: relative;
+    &::before {
+      @include backgroundStructure;
+      content: "< div >";
+      position: absolute;
+      top: 4rem;
+      left: 2rem;
+    }
+    &::after {
+      @include backgroundStructure;
+      content: "</ div >";
+      position: absolute;
+      position: absolute;
+      bottom: -6rem;
+      right: 1rem;
+    }
     &__info {
       display: inline-block;
       padding: 2rem;
@@ -41,21 +56,21 @@
     font-size: 4rem;
     font-weight: 600;
     position: relative;
-    // &::before {
-    //   @include backgroundStructure;
-    //   content: "< h2 >";
-    //   position: absolute;
-    //   top: 3.5rem;
-    //   left: -6rem;
-    // }
-    // &::after {
-    //   @include backgroundStructure;
-    //   content: "</ h2 >";
-    //   position: absolute;
-    //   position: absolute;
-    //   top: 3.5rem;
-    //   right: -6rem;
-    // }
+    &::before {
+      @include backgroundStructure;
+      content: "< h2 >";
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+    }
+    &::after {
+      @include backgroundStructure;
+      content: "</ h2 >";
+      position: absolute;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+    }
   }
   &__heading2 {
     @include heading-3;
@@ -63,21 +78,21 @@
     text-align: center;
     margin-top: 1rem;
     position: relative;
-    // &::before {
-    //   @include backgroundStructure;
-    //   content: "< h4 >";
-    //   position: absolute;
-    //   top: 0.5rem;
-    //   left: -6rem;
-    // }
-    // &::after {
-    //   @include backgroundStructure;
-    //   content: "</ h4 >";
-    //   position: absolute;
-    //   position: absolute;
-    //   top: 0.5rem;
-    //   right: -6rem;
-    // }
+    &::before {
+      @include backgroundStructure;
+      content: "< p >";
+      position: absolute;
+      top: 0;
+      left: -4rem;
+    }
+    &::after {
+      @include backgroundStructure;
+      content: "</ p >";
+      position: absolute;
+      position: absolute;
+      top: 0;
+      right: -5rem;
+    }
   }
 
   &__container {
@@ -89,13 +104,13 @@
 
     margin-top: 5rem;
     position: relative;
-    // &::after {
-    //   @include backgroundStructure;
-    //   content: "< form >";
-    //   position: absolute;
-    //   bottom: -2rem;
-    //   right: -10rem;
-    // }
+    &::after {
+      @include backgroundStructure;
+      content: "< form >";
+      position: absolute;
+      bottom: -2rem;
+      right: -10rem;
+    }
 
     &__name {
       grid-column: 1 /2;
@@ -103,13 +118,13 @@
       display: flex;
       flex-direction: column;
       position: relative;
-      // &::before {
-      //   @include backgroundStructure;
-      //   content: "< form >";
-      //   position: absolute;
-      //   top: -2rem;
-      //   left: -10rem;
-      // }
+      &::before {
+        @include backgroundStructure;
+        content: "< form >";
+        position: absolute;
+        top: -2rem;
+        left: -10rem;
+      }
     }
     &__email {
       grid-column: 2 /3;
