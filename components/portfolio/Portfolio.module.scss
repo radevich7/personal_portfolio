@@ -30,13 +30,13 @@
   p {
     color: var(--color-secondary-dark);
     font-size: 2rem;
-    padding-left: 5rem;
+    padding-left: 7rem;
     position: relative;
     &::before {
       content: "< p >";
       @include backgroundStructure;
       position: absolute;
-      left: 0.5rem;
+      left: 2.5rem;
       top: 0;
     }
     &::after {
@@ -61,15 +61,15 @@
       content: "< ul >";
       @include backgroundStructure;
       position: absolute;
-      top: 4rem;
-      left: 4rem;
+      top: 2rem;
+      left: 6rem;
     }
     &::after {
       content: "</ ul >";
       @include backgroundStructure;
       position: absolute;
-      bottom: 4rem;
-      right: 4rem;
+      bottom: 2rem;
+      right: 6rem;
     }
   }
 
