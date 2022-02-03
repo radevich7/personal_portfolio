@@ -11,7 +11,9 @@ const HomePage = () => {
       <Header />
       <Portfolio />
       <Skills />
-      <ContactForm />
+      <div style={{ paddingBottom: "25vh" }}>
+        <ContactForm />
+      </div>
     </Fragment>
   );
 };

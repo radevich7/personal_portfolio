@@ -1,11 +1,10 @@
 @import "./../../styles/sass/mixins";
 
 .form {
-  padding-bottom: 20vh;
   width: 100%;
   display: grid;
   grid-template-columns: 4rem repeat(8, 1fr) 4rem;
-
+  // padding-bottom: 30vh;
   &__contactForm {
     grid-column: 2 / 7;
     justify-self: center;
@@ -14,7 +13,7 @@
   &__map {
     background-image: url("../../public/map.svg");
     background-position: 0 10rem;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     grid-column: 7 / 10;
     position: relative;
