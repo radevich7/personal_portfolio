@@ -7,6 +7,10 @@
   margin: 20vh 7rem;
   column-gap: 5rem;
   row-gap: 4rem;
+  @include respond(tab-land) {
+    grid-template-rows: min-content 1fr 1fr;
+    row-gap: 5rem;
+  }
 
   &__heading {
     @include heading-1;
@@ -16,6 +20,9 @@
     grid-column: 1 / -1;
     justify-self: start;
     position: relative;
+    @include respond(tab-land) {
+      justify-self: center;
+    }
     &::before {
       @include backgroundStructure;
       content: "< h2 >";
@@ -35,12 +42,19 @@
   &__content {
     grid-row: 2 / 3;
     grid-column: 1 / 2;
-    align-self: center;
+
+    @include respond(tab-land) {
+      grid-row: 3 / 4;
+      grid-column: 1/-1;
+      justify-self: center;
+      // align-self: center;
+      text-align: center;
+    }
 
     p {
       color: var(--color-secondary-dark);
       font-size: 1.8rem;
-      width: 80%;
+      // width: 80%;
       position: relative;
       &::before {
         @include backgroundStructure;
@@ -65,6 +79,10 @@
     justify-self: center;
     align-self: center;
     position: relative;
+    @include respond(tab-land) {
+      grid-row: 2 / 3;
+      grid-column: 1/-1;
+    }
     &::before {
       @include backgroundStructure;
       content: "< ul >";

@@ -9,6 +9,13 @@ const NavLinks = (props) => {
     <>
       {/* List of nav links */}
       <ul className={styles.nav__list}>
+        <li className={`${styles.nav__list__item} ${styles.hide__link}`}>
+          <Link href="/">
+            <a className={styles.nav__list__link} onClick={props.toggle}>
+              Home
+            </a>
+          </Link>
+        </li>
         <li className={styles.nav__list__item}>
           <Link href="/about">
             <a className={styles.nav__list__link} onClick={props.toggle}>

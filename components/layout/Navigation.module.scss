@@ -226,12 +226,16 @@
   opacity: 1;
   width: 100%;
 }
+
 .toggleBack {
   transform: scale(100);
 }
 
 @media (min-width: 56.25em) {
   .nav__collapse {
+    display: none;
+  }
+  .hide__link {
     display: none;
   }
 }
