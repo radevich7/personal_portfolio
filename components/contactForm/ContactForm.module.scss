@@ -1,32 +1,61 @@
 @import "./../../styles/sass/mixins";
 
 .form {
-  // padding: 5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding-bottom: 20vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 4rem repeat(8, 1fr) 4rem;
+
+  &__contactForm {
+    grid-column: 2 / 7;
+    justify-self: center;
+    align-self: center;
+  }
+  &__map {
+    background-image: url("../../public/map.svg");
+    background-position: 0 10rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column: 7 / 10;
+    position: relative;
+    &__info {
+      display: inline-block;
+      padding: 2rem;
+      border: 1px solid var(--color-secondary-dark);
+      position: absolute;
+      color: var(--color-secondary-light);
+      right: 0;
+      top: 5%;
+      span {
+        display: flex;
+        align-items: center;
+        span {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
 
   &__heading1 {
     @include heading-3;
     font-size: 4rem;
     font-weight: 600;
     position: relative;
-    &::before {
-      @include backgroundStructure;
-      content: "< h2 >";
-      position: absolute;
-      top: 3.5rem;
-      left: -6rem;
-    }
-    &::after {
-      @include backgroundStructure;
-      content: "</ h2 >";
-      position: absolute;
-      position: absolute;
-      top: 3.5rem;
-      right: -6rem;
-    }
+    // &::before {
+    //   @include backgroundStructure;
+    //   content: "< h2 >";
+    //   position: absolute;
+    //   top: 3.5rem;
+    //   left: -6rem;
+    // }
+    // &::after {
+    //   @include backgroundStructure;
+    //   content: "</ h2 >";
+    //   position: absolute;
+    //   position: absolute;
+    //   top: 3.5rem;
+    //   right: -6rem;
+    // }
   }
   &__heading2 {
     @include heading-3;
@@ -34,21 +63,21 @@
     text-align: center;
     margin-top: 1rem;
     position: relative;
-    &::before {
-      @include backgroundStructure;
-      content: "< h4 >";
-      position: absolute;
-      top: 0.5rem;
-      left: -6rem;
-    }
-    &::after {
-      @include backgroundStructure;
-      content: "</ h4 >";
-      position: absolute;
-      position: absolute;
-      top: 0.5rem;
-      right: -6rem;
-    }
+    // &::before {
+    //   @include backgroundStructure;
+    //   content: "< h4 >";
+    //   position: absolute;
+    //   top: 0.5rem;
+    //   left: -6rem;
+    // }
+    // &::after {
+    //   @include backgroundStructure;
+    //   content: "</ h4 >";
+    //   position: absolute;
+    //   position: absolute;
+    //   top: 0.5rem;
+    //   right: -6rem;
+    // }
   }
 
   &__container {
@@ -57,16 +86,16 @@
     grid-template-rows: repeat(3, min-content);
     grid-column-gap: 3rem;
     grid-row-gap: 2rem;
-    width: 70%;
+
     margin-top: 5rem;
     position: relative;
-    &::after {
-      @include backgroundStructure;
-      content: "< form >";
-      position: absolute;
-      bottom: -2rem;
-      right: -10rem;
-    }
+    // &::after {
+    //   @include backgroundStructure;
+    //   content: "< form >";
+    //   position: absolute;
+    //   bottom: -2rem;
+    //   right: -10rem;
+    // }
 
     &__name {
       grid-column: 1 /2;
@@ -74,13 +103,13 @@
       display: flex;
       flex-direction: column;
       position: relative;
-      &::before {
-        @include backgroundStructure;
-        content: "< form >";
-        position: absolute;
-        top: -2rem;
-        left: -10rem;
-      }
+      // &::before {
+      //   @include backgroundStructure;
+      //   content: "< form >";
+      //   position: absolute;
+      //   top: -2rem;
+      //   left: -10rem;
+      // }
     }
     &__email {
       grid-column: 2 /3;

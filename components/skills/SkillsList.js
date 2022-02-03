@@ -26,7 +26,6 @@ import { Fragment } from "react";
 const SkillsList = () => {
   return (
     <Fragment>
-      <h3 className={styles.skills__heading}>Skills</h3>
       <ul className={styles.skills__list}>
         <li className={styles.skills__list__item}>
           <FaReact />
