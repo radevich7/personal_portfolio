@@ -6,10 +6,12 @@
   background-color: var(--color-primary-medium);
   top: 0;
   left: 0;
+
   @include respond(tab-port) {
     background-color: transparent;
     width: 100%;
-    z-index: 1;
+    height: 0;
+    position: relative;
   }
   // Full-screen nav disabled after 900px
   &__fullScreenNav {
@@ -74,7 +76,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      z-index: 2500;
+      z-index: 3000;
       font-weight: 300;
       text-transform: uppercase;
       justify-content: center;
@@ -146,7 +148,7 @@
       position: fixed;
       top: 0;
       left: 0;
-      z-index: 1500;
+      z-index: 2000;
       opacity: 0;
       width: 0;
       transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
@@ -164,7 +166,7 @@
       top: 6rem;
       right: 6rem;
       border-radius: 50%;
-      z-index: 2000;
+      z-index: 4000;
       cursor: pointer;
       text-align: center;
     }
@@ -234,6 +236,7 @@
 @media (min-width: 56.25em) {
   .nav__collapse {
     display: none;
+    visibility: hidden;
   }
   .hide__link {
     display: none;

@@ -1,39 +1,34 @@
 @import "../../styles/sass/mixins";
 
 .about {
-  // height: 165vh;
   margin: 0 auto;
-  // padding: 5rem 5rem 0 5rem;
+  height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, min-content);
+
   position: relative;
-
+  justify-content: center;
+  align-content: center;
+  @include respond(tab-port) {
+    grid-template-columns: repeat(1, 1fr);
+  }
   //   About me
-
   //   Section with a photo and the detailed explanation
   &__zone {
-    // width: 50%;
     &__heading {
       @include heading-1;
-      grid-column: 1 / 3;
       position: relative;
-      padding-left: 7rem;
+      // padding-left: 7rem;
 
       &::before {
         @include backgroundStructure;
         content: "< h2 >";
-
-        position: absolute;
-        top: 3.5rem;
-        left: 1.5rem;
+        margin-right: 2rem;
       }
       &::after {
         @include backgroundStructure;
         content: "</ h2 >";
-        position: absolute;
-        top: 3.5rem;
-        right: -7rem;
+        margin-left: 2rem;
       }
     }
     &__photo {

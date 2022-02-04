@@ -4,33 +4,60 @@
   width: 100%;
   display: grid;
   grid-template-columns: 4rem repeat(8, 1fr) 4rem;
-  // padding-bottom: 30vh;
+  position: relative;
+  &::before {
+    @include backgroundStructure;
+    content: "</ body >";
+    position: absolute;
+    left: 2rem;
+    bottom: -10rem;
+  }
+  &::after {
+    @include backgroundStructure;
+    content: "</ html >";
+    position: absolute;
+    left: 0;
+    bottom: -15rem;
+  }
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-row-gap: 4rem;
+  }
+  @include respond(phone) {
+    grid-template-rows: repeat(1, 2fr);
+  }
   &__contactForm {
     grid-column: 2 / 7;
     justify-self: center;
     align-self: center;
+    @include respond(tab-port) {
+      grid-column: 2 / 8;
+      grid-row: 2 / 3;
+    }
   }
   &__map {
     background-image: url("../../public/map.svg");
     background-position: 0 10rem;
     background-size: contain;
+    position: relative;
     background-repeat: no-repeat;
     grid-column: 7 / 10;
-    position: relative;
+    @include respond(tab-port) {
+      display: none;
+    }
+
     &::before {
       @include backgroundStructure;
       content: "< div >";
-      position: absolute;
-      top: 4rem;
-      left: 2rem;
     }
     &::after {
       @include backgroundStructure;
       content: "</ div >";
       position: absolute;
-      position: absolute;
-      bottom: -6rem;
-      right: 1rem;
+      bottom: 0;
+      right: 0;
     }
     &__info {
       display: inline-block;
@@ -58,17 +85,12 @@
     &::before {
       @include backgroundStructure;
       content: "< h2 >";
-      position: absolute;
-      top: 2rem;
-      left: 2rem;
+      margin-right: 1rem;
     }
     &::after {
       @include backgroundStructure;
       content: "</ h2 >";
-      position: absolute;
-      position: absolute;
-      top: 2rem;
-      right: 2rem;
+      margin-left: 1rem;
     }
   }
   &__heading2 {
@@ -80,17 +102,12 @@
     &::before {
       @include backgroundStructure;
       content: "< p >";
-      position: absolute;
-      top: 0;
-      left: -4rem;
+      margin-right: 1rem;
     }
     &::after {
       @include backgroundStructure;
       content: "</ p >";
-      position: absolute;
-      position: absolute;
-      top: 0;
-      right: -5rem;
+      margin-left: 1rem;
     }
   }
 
@@ -103,12 +120,14 @@
 
     margin-top: 5rem;
     position: relative;
+    @include respond(tab-port) {
+    }
     &::after {
       @include backgroundStructure;
       content: "< form >";
       position: absolute;
-      bottom: -2rem;
-      right: -10rem;
+      bottom: -4rem;
+      right: 0;
     }
 
     &__name {
@@ -117,12 +136,17 @@
       display: flex;
       flex-direction: column;
       position: relative;
+      @include respond(tab-port) {
+        grid-column: 1 /-1;
+        grid-row: 1 /2;
+        font-size: 1.6rem;
+      }
       &::before {
         @include backgroundStructure;
         content: "< form >";
         position: absolute;
-        top: -2rem;
-        left: -10rem;
+        top: -4rem;
+        left: 0;
       }
     }
     &__email {
@@ -131,6 +155,11 @@
       display: flex;
       flex-direction: column;
       position: relative;
+      @include respond(tab-port) {
+        grid-column: 1 /-1;
+        grid-row: 2 /3;
+        font-size: 1.6rem;
+      }
     }
     &__message {
       grid-column: 1 /3;
@@ -138,12 +167,21 @@
       display: flex;
       flex-direction: column;
       position: relative;
+      @include respond(tab-port) {
+        grid-column: 1 /-1;
+        grid-row: 3 / 4;
+        font-size: 1.6rem;
+      }
     }
     &__btnSubmit {
       grid-column: 1 /3;
       grid-row: 3 /-1;
       align-self: center;
       justify-self: center;
+      @include respond(tab-port) {
+        grid-column: 1 /-1;
+        grid-row: 4 /5;
+      }
 
       &,
       &:link,
@@ -186,6 +224,9 @@
     color: var(--color-white);
     font-size: 1.2rem;
     resize: none;
+    @include respond(tab-port) {
+      font-size: 1.6rem;
+    }
 
     &:focus {
       outline: none;
@@ -205,6 +246,9 @@
 
     display: block;
     transition: all 0.3s;
+    @include respond(tab-port) {
+      font-size: 1.6rem;
+    }
   }
   &__input:placeholder-shown + &__label,
   &__textArea:placeholder-shown + &__label {
@@ -221,7 +265,7 @@
     color: var(--color-tertiary-light);
   }
 }
-
+// spinner
 .spinner {
   margin-top: 6rem;
 }

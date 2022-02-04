@@ -9,22 +9,20 @@
   flex-direction: column;
   justify-content: center;
   @include respond(tab-port) {
-    align-items: center;
-  }
-  @include respond(phone) {
+    text-align: center;
   }
 
   &__main {
     padding-left: 7rem;
     position: relative;
     @include respond(phone) {
-      padding: 1rem;
+      padding: 4rem;
     }
 
     h1 {
       font-size: 7rem;
       @include respond(phone) {
-        font-size: 4.5rem;
+        font-size: 4.3rem;
       }
       &:last-of-type {
         margin-bottom: 5rem;
@@ -153,6 +151,17 @@
     position: absolute;
 
     right: -10rem;
+  }
+  .form__bodyClose {
+    @include backgroundStructure;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  &__htmlClose {
+    @include backgroundStructure;
+    bottom: 0;
+    left: 0;
   }
 }
 

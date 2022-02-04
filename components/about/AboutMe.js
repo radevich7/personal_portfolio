@@ -4,7 +4,7 @@ import styles from "./About.module.scss";
 
 const AboutMe = () => {
   return (
-    <Fragment>
+    <div>
       <h1 className={styles.about__zone__heading}>About me</h1>
       <div className={styles.about__zone}>
         <div className={styles.about__zone__photo}></div>
@@ -22,7 +22,7 @@ const AboutMe = () => {
           </p>
         </div>
       </div>
-    </Fragment>
+    </div>
   );
 };
 
