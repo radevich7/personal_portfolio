@@ -134,7 +134,7 @@ const ContactForm = () => {
               sendEmail(values).then(() => resetForm({ values: "" }));
             }}
           >
-            <Form className={styles.form__container}>
+            <Form className={styles.form__container} id="contactForm">
               <div className={styles.form__container__name}>
                 <MyTextInput
                   label="Full Name"

@@ -1,6 +1,7 @@
 import styles from "./Header.module.scss";
 import Button from "../reusableComponents/Button";
-// import Particles from "../canvas/Particles";
+import ScrollTo from "react-scroll-into-view";
+
 const Header = () => {
   let hello = "Hello,";
   let me = `I'm`;
@@ -14,7 +15,6 @@ const Header = () => {
   };
   return (
     <header className={styles.header}>
-      {/* <Particles /> */}
       <div className={styles.header__main}>
         <h1>
           {[...hello].map((val, index) => (
@@ -38,7 +38,10 @@ const Header = () => {
             <span key={generateKey(val + index)}>{val}</span>
           ))}
         </h1>
-        <Button>Contact me</Button>
+
+        <ScrollTo selector="#contactForm">
+          <Button>Contact me</Button>
+        </ScrollTo>
       </div>
       <span className={styles.header__quote}>
         “The future belongs to those who believe in the beauty of their
