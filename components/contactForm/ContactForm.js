@@ -94,88 +94,94 @@ const ContactForm = () => {
 
   return (
     <section className={styles.form}>
-      <div className={styles.form__contactForm}>
-        <h1 className={styles.form__heading1}>Send me a message!</h1>
-        <h2 className={styles.form__heading2}>
-          Got a question or proposal, or just want to say hello? Go ahead!
-        </h2>
-        {loading ? (
-          <div className={styles.spinner}>
+      {loading && (
+        <div className={styles.spinner}>
+          <span>
             <BallTriangle
               heigth="150"
               width="150"
               color="#208294"
               ariaLabel="loading"
             />
-          </div>
-        ) : (
-          <Formik
-            initialValues={{
-              name: "",
-              email: "",
-              message: "",
-            }}
-            validationSchema={Yup.object({
-              name: Yup.string(25, "Must be 15 characters or less").required(
-                "Required"
-              ),
-              email: Yup.string()
-                .email("Invalid email address")
-                .required("Required"),
-              message: Yup.string(
-                250,
-                "Must be 250 characters or less"
-              ).required("Required"),
-            })}
-            onSubmit={async (values, { setSubmitting, resetForm }) => {
-              await new Promise((r) => setTimeout(r, 500));
-              setSubmitting(false);
-              // Delete input fields after the message send
-              sendEmail(values).then(() => resetForm({ values: "" }));
-            }}
-          >
-            <Form className={styles.form__container} id="contactForm">
-              <div className={styles.form__container__name}>
-                <MyTextInput
-                  label="Full Name"
-                  id="name"
-                  name="name"
-                  type="text"
-                  placeholder="Full Name"
-                  className={styles.form__input__name}
-                />
-              </div>
-              <div className={styles.form__container__email}>
-                <MyTextInput
-                  label="Email Address"
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="Email Address"
-                />
-              </div>
-              <div className={styles.form__container__message}>
-                <MyTextArea
-                  label="Message"
-                  name="message"
-                  id="message"
-                  placeholder="Message"
-                  rows="4"
-                  cols="50"
-                />
-              </div>
+          </span>
+        </div>
+      )}
+      <div
+        className={`${styles.form__contactForm} ${
+          loading ? styles.backgroundBlur : ""
+        }`}
+      >
+        <h1 className={styles.form__heading1}>Send me a message!</h1>
+        <h2 className={styles.form__heading2}>
+          Got a question or proposal, or just want to say hello? Go ahead!
+        </h2>
 
-              <button
-                type="submit"
-                className={styles.form__container__btnSubmit}
-              >
-                Submit
-              </button>
-            </Form>
-          </Formik>
-        )}
+        <Formik
+          initialValues={{
+            name: "",
+            email: "",
+            message: "",
+          }}
+          validationSchema={Yup.object({
+            name: Yup.string(25, "Must be 15 characters or less").required(
+              "Required"
+            ),
+            email: Yup.string()
+              .email("Invalid email address")
+              .required("Required"),
+            message: Yup.string(250, "Must be 250 characters or less").required(
+              "Required"
+            ),
+          })}
+          onSubmit={async (values, { setSubmitting, resetForm }) => {
+            await new Promise((r) => setTimeout(r, 500));
+            setSubmitting(false);
+            // Delete input fields after the message send
+            sendEmail(values).then(() => resetForm({ values: "" }));
+          }}
+        >
+          <Form className={styles.form__container} id="contactForm">
+            <div className={styles.form__container__name}>
+              <MyTextInput
+                label="Full Name"
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Full Name"
+                className={styles.form__input__name}
+              />
+            </div>
+            <div className={styles.form__container__email}>
+              <MyTextInput
+                label="Email Address"
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Email Address"
+              />
+            </div>
+            <div className={styles.form__container__message}>
+              <MyTextArea
+                label="Message"
+                name="message"
+                id="message"
+                placeholder="Message"
+                rows="4"
+                cols="50"
+              />
+            </div>
+
+            <button type="submit" className={styles.form__container__btnSubmit}>
+              Submit
+            </button>
+          </Form>
+        </Formik>
       </div>
-      <div className={styles.form__map}>
+      <div
+        className={`${styles.form__map} ${
+          loading ? styles.backgroundBlur : ""
+        }`}
+      >
         <div className={styles.form__map__info}>
           Julian Radevych,
           <br />

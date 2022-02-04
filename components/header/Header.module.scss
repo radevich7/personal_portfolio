@@ -24,17 +24,17 @@
       font-size: 7rem;
 
       &:nth-child(1) {
-        animation-name: moveInLeft;
+        animation-name: moveInLeft1;
         animation-duration: 1s;
         animation-timing-function: ease-out;
       }
       &:nth-child(2) {
-        animation-name: moveInLeft;
+        animation-name: moveInRight;
         animation-duration: 1s;
         animation-timing-function: ease-out;
       }
       &:nth-child(3) {
-        animation-name: moveInLeft;
+        animation-name: moveInLeft3;
         animation-duration: 1s;
         animation-timing-function: ease-out;
       }
@@ -102,6 +102,10 @@
         position: absolute;
         left: 0;
         transform: translateX(4px);
+        animation-name: bounce;
+        animation-duration: 0.2s;
+        animation-timing-function: ease-out;
+        animation-delay: 0.5s;
       }
     }
     &::before {
@@ -201,10 +205,39 @@
 }
 
 // animations
+// h1 first element
 @keyframes moveInLeft1 {
   0% {
     opacity: 0;
     transform: translateX(-20rem);
+  }
+  60% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+// h1 second element
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+// h1 third element
+@keyframes moveInLeft3 {
+  0% {
+    opacity: 0;
+    transform: translateX(-40rem);
   }
   80% {
     transform: translateX(1rem);

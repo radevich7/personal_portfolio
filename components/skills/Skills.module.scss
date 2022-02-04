@@ -6,7 +6,7 @@
   grid-template-rows: min-content 1fr;
   margin: 20vh 7rem;
   column-gap: 5rem;
-  row-gap: 4rem;
+  row-gap: 8rem;
   justify-content: center;
   align-content: center;
   @include respond(tab-land) {
