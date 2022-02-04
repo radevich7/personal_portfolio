@@ -51,12 +51,17 @@
     height: 100%;
     grid-column: 2 /3;
     display: grid;
-    grid-template-columns: repeat(4, 22rem);
-    grid-template-rows: repeat(2, 22rem);
+    grid-template-columns: repeat(4, 25rem);
+    grid-template-rows: repeat(2, 25rem);
     justify-content: center;
 
+    @include respond(tab-land) {
+      grid-template-columns: repeat(4, 21rem);
+      grid-template-rows: repeat(2, 21rem);
+    }
     @include respond(tab-port) {
-      grid-template-columns: repeat(3, 22rem);
+      grid-template-columns: repeat(3, 25rem);
+      grid-template-rows: repeat(2, 25rem);
     }
     @include respond(phone) {
       grid-template-columns: repeat(1, 32rem);
@@ -96,7 +101,7 @@
     }
 
     &:hover {
-      transform: scale(1.3);
+      transform: scale(1.4);
       transition: all 0.6s;
     }
 
@@ -200,19 +205,45 @@
   &__hoverContent {
     width: 100%;
     height: 100%;
+    display: block;
     position: relative;
+    transition: all 0.3s;
   }
 
   &__hoverLink {
-    width: 100%;
-    height: 100%;
-    position: relative;
+    width: 10rem;
+    height: 10rem;
     display: none;
-    @include respond(tab-port) {
-      display: none;
+    text-decoration: none;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transition: all 2s;
+    span {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-secondary-dark);
+      color: var(--color-white);
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      transform: scale(1);
+      transition: all 0.2s;
+
+      &:hover {
+        color: var(--color-secondary-light);
+        transform: scale(1.1);
+      }
     }
   }
-  &__hoverContent:hover &__hoverLink {
+  &__hoverContent:hover {
+    background-color: rgba(7, 34, 39, 0.5);
+  }
+  &__hoverContent:hover .portfolio__hoverLink {
     display: inline-block;
+    transform: translate(-50%, -50%) scale(1);
   }
 }

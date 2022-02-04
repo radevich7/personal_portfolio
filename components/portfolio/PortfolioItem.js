@@ -24,11 +24,9 @@ const PortfolioItem = (props) => {
             </a>
           </Link>
         </div>
-      </div>
-      <div className={styles.portfolio__hoverLink}>
         <Link href={props.project.url}>
-          <a className={styles.portfolio__video__link}>
-            <FaExternalLinkSquareAlt />
+          <a className={styles.portfolio__hoverLink}>
+            <span>visit</span>
           </a>
         </Link>
       </div>

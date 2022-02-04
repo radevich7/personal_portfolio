@@ -5,7 +5,7 @@ import PortfolioItem from "./PortfolioItem";
 const Portfolio = () => {
   // prettier-ignore
   const projects = [
-    {id: 1, mp4: "mktfy.mp4", webm: "mktfy.webm", url: "/", style: styles.portfolio__item__1},
+    {id: 1, mp4: "mktfy.mp4", webm: "mktfy.webm", url: "/hello", style: styles.portfolio__item__1},
     {id: 2, mp4: "reactMeals.mp4", webm: "reactMeals.webm", url: "/", style: styles.portfolio__item__2},
     {id: 3, mp4: "nexter.mp4", webm: "nexter.webm", url: "/", style: styles.portfolio__item__3},
     {id: 4, mp4: "mapty.mp4", webm: "mapty.webm",url: "/", style: styles.portfolio__item__4},
