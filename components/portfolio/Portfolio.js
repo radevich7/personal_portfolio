@@ -1,6 +1,5 @@
 import styles from "./Portfolio.module.scss";
-import Link from "next/link";
-import { FaArrowCircleRight } from "react-icons/fa";
+
 import PortfolioItem from "./PortfolioItem";
 
 const Portfolio = () => {
