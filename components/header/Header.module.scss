@@ -15,12 +15,30 @@
   &__main {
     padding-left: 7rem;
     position: relative;
+
     @include respond(phone) {
       padding: 4rem;
     }
 
     h1 {
       font-size: 7rem;
+
+      &:nth-child(1) {
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+      }
+      &:nth-child(2) {
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+      }
+      &:nth-child(3) {
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+      }
+
       @include respond(phone) {
         font-size: 4.3rem;
       }
@@ -179,5 +197,20 @@
   }
   60% {
     transform: translateY(-15px);
+  }
+}
+
+// animations
+@keyframes moveInLeft1 {
+  0% {
+    opacity: 0;
+    transform: translateX(-20rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
   }
 }

@@ -10,7 +10,7 @@ import NextNprogress from "nextjs-progressbar";
 
 const Layout = (props) => {
   const router = useRouter();
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     const handleStart = (url) => {
       url !== router.pathname ? setLoading(true) : setLoading(false);
