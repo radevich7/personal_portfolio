@@ -17,13 +17,15 @@ const AboutMe = () => {
           <h2>Julian Radevych</h2>
           <h4>Front-End Developer</h4>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
-            aliquid eius quaerat, repellendus ad in possimus sequi pariatur est
-            minus amet placeat perferendis animi impedit quibusdam cumque fugiat
-            numquam suscipit. Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Doloribus aliquid eius quaerat, repellendus ad in
-            possimus sequi pariatur est minus amet placeat perferendis animi
-            impedit quibusdam cumque fugiat numquam suscipit.
+            {" "}
+            I'm a Front-End Developer located in Canada. I am passionate about
+            building interactive, eye-catching, accessible applications and
+            digital experiences. I love coding and solve problems through code,
+            and I am excited to work alongside with the other amazing
+            developers. <br />
+            My abundant energy fuels me in the pursuit of many interests,
+            hobbies and areas of study. I'm a fast learner, able to pick up new
+            skills and juggle different projects in a fast-paced environment.
           </p>
         </div>
       </div>

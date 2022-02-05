@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useRef } from "react";
+import { Fragment, useEffect } from "react";
 import Header from "../components/header/Header";
 import ContactForm from "../components/contactForm/ContactForm";
 import Skills from "../components/skills/Skills";
@@ -12,13 +12,9 @@ const PortfolioDynamic = dynamic(() =>
 );
 
 const HomePage = () => {
-  // When in view to import the component
-  // Portfolio
+  // When in view to import the portfolio component
+
   const { observe, inView } = useInView({
-    onEnter: ({ unobserve }) => unobserve(),
-  });
-  // Skills section
-  const { observeSkills, inViewSkills } = useInView({
     onEnter: ({ unobserve }) => unobserve(),
   });
 
@@ -38,18 +34,14 @@ const HomePage = () => {
       >
         {inView && <PortfolioDynamic />}
       </div>
-      <div
-        data-aos="fade-up"
-        data-aos-once="true"
-        data-aos-offset="200"
-        ref={observeSkills}
-      >
+      <div data-aos="fade-up" data-aos-once="true" data-aos-offset="400">
         <Skills />
       </div>
       <div
         style={{ paddingBottom: "25vh" }}
         data-aos="fade-up"
         data-aos-once="true"
+        data-aos-offset="400"
       >
         <ContactForm />
       </div>

@@ -27,6 +27,16 @@
         animation-name: moveInLeft1;
         animation-duration: 1s;
         animation-timing-function: ease-out;
+        &::before {
+          content: "< h1 >";
+          @include backgroundStructure;
+          // margin-right: 1.5rem;
+          position: absolute;
+          // display: inline;
+          // top: 3.5rem;
+          top: 3.8rem;
+          left: 2.5rem;
+        }
       }
       &:nth-child(2) {
         animation-name: moveInRight;
@@ -40,7 +50,7 @@
       }
 
       @include respond(phone) {
-        font-size: 4.3rem;
+        font-size: 4.25rem;
       }
       &:last-of-type {
         margin-bottom: 5rem;
@@ -107,14 +117,6 @@
         animation-timing-function: ease-out;
         animation-delay: 0.5s;
       }
-    }
-    &::before {
-      content: "< h1 >";
-      @include backgroundStructure;
-      // position: absolute;
-      // display: inline;
-      top: 3.5rem;
-      left: 2.5rem;
     }
   }
   &__quote {
