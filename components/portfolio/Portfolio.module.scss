@@ -72,10 +72,11 @@
   // images as a background
   &__image {
     filter: grayscale(20%);
-    &:hover {
-      filter: blur(2px);
-    }
   }
+  &__hoverContent:hover &__image {
+    filter: blur(2px);
+  }
+
   // video element
 
   &__hoverContent:hover &__video {
@@ -153,7 +154,9 @@
     transition: all 0.3s;
     cursor: pointer;
   }
-
+  &__hoverLink:hover &__hoverContent span {
+    filter: blur(2px);
+  }
   &__hoverLink {
     width: 10rem;
     height: 10rem;
@@ -163,7 +166,6 @@
     position: absolute;
     top: 50%;
     left: 50%;
-
     transition: all 2s;
     span {
       display: flex;

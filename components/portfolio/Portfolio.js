@@ -11,7 +11,7 @@ const Portfolio = (props, ref) => {
     {id: 4, mp4: "mapty.mp4", webm: "mapty.webm",url: "/", style: styles.portfolio__item__4,photoUrl:'/mapty.svg'},
     {id: 5, mp4: "bankist.mp4", webm: "bankist.webm", url: "/", style: styles.portfolio__item__5,photoUrl:'/bankist.svg'},
     {id: 6, mp4: "meetups.mp4", webm: "meetups.webm", url: "/", style: styles.portfolio__item__6,photoUrl:'/meetups.svg'},
-    {id: 7, mp4: "natours.mp4", webm: "natours.webm", url: "/", style: styles.portfolio__item__7,photoUrl:'/projectNatour.png'},
+    {id: 7, mp4: "natours.mp4", webm: "natours.webm", url: "/", style: styles.portfolio__item__7,photoUrl:'/natours.svg'},
     {id: 8, mp4: "pigGame.mp4", webm: "pigGame.webm", url: "/", style: styles.portfolio__item__8,photoUrl:'/piggame.svg'},
   ];
 
