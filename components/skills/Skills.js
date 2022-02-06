@@ -8,13 +8,12 @@ const Skills = () => {
       </h2>
       <div className={styles.skills__content}>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-          cumque nulla est ea quia odio veritatis ipsum officia, perspiciatis in
-          quidem corporis, necessitatibus totam porro similique ipsam unde
-          officiis et. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Debitis, amet in assumenda nobis numquam optio aspernatur voluptate
-          dolor reiciendis, labore odit quam enim quia omnis exercitationem.
-          Exercitationem cupiditate suscipit modi.
+          I got exposed to the coding in 2018, however, I pivot in to the web
+          development industry in the end of 2020. I was so hungry to learn
+          coding that I decided to quit from my previous job and invest all of
+          my time and effort in order to become web developer. Since that time,
+          I was exposed to the multiple projects and technologies, that
+          challenged me and help to gain experience and a strong knowledge.
         </p>
       </div>
       <div className={styles.skills__stack}>
