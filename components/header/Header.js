@@ -44,8 +44,8 @@ const Header = () => {
         </ScrollTo>
       </div>
       <span className={styles.header__quote}>
-        “The future belongs to those who believe in the beauty of their
-        dreams.”—Eleanor Roosevelt.
+        “The beautiful thing about learning is that nobody can take it away from
+        you.” ― B.B. King
       </span>
 
       {/* background structure of the html */}
