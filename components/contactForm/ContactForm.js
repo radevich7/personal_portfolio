@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from "next/image";
 import styles from "./ContactForm.module.scss";
 import * as Yup from "yup";
 import { Formik, Form, useField } from "formik";

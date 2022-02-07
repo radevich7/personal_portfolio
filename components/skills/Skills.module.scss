@@ -49,12 +49,15 @@
   &__content {
     grid-row: 2 / 3;
     grid-column: 1 / 2;
+    align-self: center;
+    width: 90%;
 
     @include respond(tab-land) {
       grid-row: 3 / 4;
       grid-column: 1/-1;
       justify-self: center;
       text-align: center;
+      width: 100%;
     }
 
     p {

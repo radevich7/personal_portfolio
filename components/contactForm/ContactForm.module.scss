@@ -39,24 +39,34 @@
   }
   &__map {
     background-image: url("../../public/map.svg");
-    background-position: 0 10rem;
+    background-position: 0 12rem;
+
     background-size: contain;
-    position: relative;
     background-repeat: no-repeat;
+
+    position: relative;
     grid-column: 7 / 10;
+    @include respond(tab-land) {
+      background-position: 0 15rem;
+    }
     @include respond(tab-port) {
       display: none;
     }
-
+    &__img {
+      grid-row: 1 / 3;
+    }
     &::before {
       @include backgroundStructure;
       content: "< div >";
+      position: absolute;
+      left: 2rem;
+      top: 4rem;
     }
     &::after {
       @include backgroundStructure;
       content: "</ div >";
       position: absolute;
-      bottom: 0;
+      bottom: 2rem;
       right: 0;
     }
     &__info {
@@ -123,8 +133,7 @@
 
     margin-top: 5rem;
     position: relative;
-    @include respond(tab-port) {
-    }
+
     &::after {
       @include backgroundStructure;
       content: "< form >";
