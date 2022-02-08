@@ -23,18 +23,14 @@ const CollapseNav = () => {
           className={`${styles.nav__collapse__icon} ${
             open && styles.middleLine
           }`}
-        >
-          &nbsp;
-        </span>
+        ></span>
       </label>
 
       <div
         className={`${styles.nav__collapse__background} ${
           open && styles.toggleBack
         }`}
-      >
-        &nbsp;
-      </div>
+      ></div>
       <nav
         className={`${styles.nav__collapse__navigation} ${
           open && styles.toggleNav

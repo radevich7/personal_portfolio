@@ -33,7 +33,7 @@ const Education = React.forwardRef((props, ref) => {
               <span>Calgary, AB </span>
             </div>
             <span className={styles.about__education__dates}>
-              09/2021 -01/2022
+              09/2021 - 01/2022
             </span>
           </div>
           <div className={styles.about__education__main}>
@@ -43,7 +43,7 @@ const Education = React.forwardRef((props, ref) => {
               <span>Toronto, ON </span>
             </div>
             <span className={styles.about__education__dates}>
-              02/2021 -04/2021
+              02/2021 - 04/2021
             </span>
           </div>
           <div className={styles.about__education__main}>
@@ -53,7 +53,7 @@ const Education = React.forwardRef((props, ref) => {
               <span>Kyiv, Ukraine </span>
             </div>
             <span className={styles.about__education__dates}>
-              09/2007 -06/2011
+              09/2007 - 06/2011
             </span>
           </div>
         </div>
