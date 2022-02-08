@@ -21,7 +21,8 @@ const Portfolio = (props, ref) => {
     <section className={styles.portfolio} ref={ref}>
       <h2>Portfolio</h2>
       <p>
-        Below you can see some of my projects, that I've been working lately
+        Below you can see some of my projects, that I&lsquo;ve been working
+        lately
       </p>
       <ul className={styles.portfolio__container}>
         {projects.map((item) => (

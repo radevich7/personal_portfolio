@@ -66,5 +66,5 @@ const Education = React.forwardRef((props, ref) => {
     </div>
   );
 });
-
+Education.displayName = "Education";
 export default Education;

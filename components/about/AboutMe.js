@@ -21,18 +21,18 @@ const AboutMe = () => {
           <h4>Front-End Developer</h4>
           <div>
             <p>
-              I'm a Front-End Developer located in Canada. I am passionate about
-              building interactive, eye-catching, accessible applications and
-              digital experiences. I enjoy coding and solve problems through
+              I&lsquo;m a Front-End Developer located in Canada. I am passionate
+              about building interactive, eye-catching, accessible applications
+              and digital experiences. I enjoy coding and solve problems through
               code, and I am excited to work alongside with the other amazing
               developers.
             </p>
             <p>
-              I'm a fast learner, able to pick up new skills and juggle
+              I&lsquo;m a fast learner, able to pick up new skills and juggle
               different projects in a fast-paced environment.
             </p>
             <p>
-              Out of the computer desk you'll find me hiking with my wife,
+              Out of the computer desk you&lsquo;ll find me hiking with my wife,
               fishing and watching movies. I love travelling, taste and try new
               things.
             </p>

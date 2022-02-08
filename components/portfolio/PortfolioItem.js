@@ -11,7 +11,6 @@ const PortfolioItem = (props) => {
       <div className={styles.portfolio__hoverContent}>
         <Image
           src={props.project.photoUrl}
-          alt="Image of the project's logo"
           layout="fill"
           className={styles.portfolio__image}
           alt="Project's poster"
