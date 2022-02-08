@@ -1,11 +1,12 @@
 import { useState } from "react";
-import Image from "next/image";
-import styles from "./ContactForm.module.scss";
 import * as Yup from "yup";
 import { Formik, Form, useField } from "formik";
 import Swal from "sweetalert2";
 import emailjs from "emailjs-com";
+
+import styles from "./ContactForm.module.scss";
 import "animate.css";
+// icons and spiner
 import { BallTriangle } from "react-loader-spinner";
 import { AiOutlineMail } from "react-icons/ai";
 import { AiFillPhone } from "react-icons/ai";

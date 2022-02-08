@@ -1,6 +1,7 @@
 import styles from "./Header.module.scss";
-import Button from "../reusableComponents/Button";
 import ScrollTo from "react-scroll-into-view";
+// component
+import Button from "../reusableComponents/Button";
 
 const Header = () => {
   let hello = "Hello,";
@@ -50,11 +51,11 @@ const Header = () => {
 
       {/* background structure of the html */}
       <div className={styles.back__scheme}>
-        <span className={styles.back__scheme__html}>&lt; html &gt;</span>
-        <span className={styles.back__scheme__header}>&lt; header &gt;</span>
-        <span className={styles.back__scheme__body}>&lt; body &gt;</span>
+        <span className={styles.back__scheme__html}>{`< html >`}</span>
+        <span className={styles.back__scheme__header}>{`< header >`}</span>
+        <span className={styles.back__scheme__body}>{`< body >`}</span>
         <span className={styles.back__scheme__headerClose}>
-          &lt;/ header &gt;
+          {`</ header >`}
         </span>
       </div>
 

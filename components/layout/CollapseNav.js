@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./Navigation.module.scss";
+// component
 import NavLinks from "./NavLinks";
 
 const CollapseNav = () => {

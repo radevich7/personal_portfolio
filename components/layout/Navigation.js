@@ -1,7 +1,9 @@
 import Link from "next/link";
+import styles from "./Navigation.module.scss";
+
+// components
 import CollapseNav from "./CollapseNav";
 import NavLinks from "./NavLinks";
-import styles from "./Navigation.module.scss";
 
 const Navigation = () => {
   return (

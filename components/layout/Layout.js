@@ -1,12 +1,13 @@
-import Navigation from "./Navigation";
-import styles from "./Layout.module.scss";
-import { Fragment } from "react";
-
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import Loading from "../loadingScreen/Loading";
+import { Fragment } from "react";
 
+import styles from "./Layout.module.scss";
 import NextNprogress from "nextjs-progressbar";
+
+// components
+import Loading from "../loadingScreen/Loading";
+import Navigation from "./Navigation";
 
 const Layout = (props) => {
   const router = useRouter();

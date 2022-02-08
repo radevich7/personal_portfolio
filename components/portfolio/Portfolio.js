@@ -1,5 +1,7 @@
-import styles from "./Portfolio.module.scss";
 import React, { forwardRef } from "react";
+import styles from "./Portfolio.module.scss";
+
+// component
 import PortfolioItem from "./PortfolioItem";
 
 const Portfolio = (props, ref) => {

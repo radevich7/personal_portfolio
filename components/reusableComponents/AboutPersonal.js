@@ -1,4 +1,5 @@
 import styles from "./AboutPersonal.module.scss";
+
 const AboutPersonal = (props) => {
   const generateKey = (val) => {
     return `${val}_${new Date().getTime()}`;

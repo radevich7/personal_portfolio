@@ -1,6 +1,6 @@
-import { Fragment } from "react";
-import Image from "next/image";
 import styles from "./About.module.scss";
+// component
+import Image from "next/image";
 
 const AboutMe = () => {
   return (
@@ -8,7 +8,12 @@ const AboutMe = () => {
       <h1 className={styles.about__zone__heading}>About me</h1>
       <div className={styles.about__zone}>
         <div className={styles.about__zone__photoCon}>
-          <Image src="/myPhoto.jpeg" width={320} height={320} />
+          <Image
+            src="/myPhoto.jpeg"
+            width={320}
+            height={320}
+            alt="Photo of me"
+          />
         </div>
 
         <div className={styles.about__zone__text}>

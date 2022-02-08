@@ -1,8 +1,10 @@
-import styles from "./Portfolio.module.scss";
 import Link from "next/link";
-import { FaExternalLinkSquareAlt } from "react-icons/fa";
-import { BsFillInfoSquareFill } from "react-icons/bs";
 import Image from "next/image";
+import styles from "./Portfolio.module.scss";
+
+// icon
+import { FaExternalLinkSquareAlt } from "react-icons/fa";
+
 const PortfolioItem = (props) => {
   return (
     <li className={props.project.style}>
@@ -12,6 +14,7 @@ const PortfolioItem = (props) => {
           alt="Image of the project's logo"
           layout="fill"
           className={styles.portfolio__image}
+          alt="Project's poster"
         />
         <div className={styles.portfolio__video}>
           <video

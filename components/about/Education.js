@@ -1,13 +1,12 @@
-import styles from "./About.module.scss";
 import React from "react";
+import styles from "./About.module.scss";
+// component
 import AboutPersonal from "../reusableComponents/AboutPersonal";
 // icons
 import { FaHeadphones } from "react-icons/fa";
 import { MdOutlineCardTravel } from "react-icons/md";
 import { BiMoviePlay } from "react-icons/bi";
 import { GiFishingHook } from "react-icons/gi";
-
-import SkillsList from "../skills/SkillsList";
 
 const Education = React.forwardRef((props, ref) => {
   const languages = [
@@ -64,7 +63,6 @@ const Education = React.forwardRef((props, ref) => {
         {/* Personal interests */}
         <AboutPersonal items={interests} title={"Interests"} style={true} />
       </div>
-      {/* <SkillsList /> */}
     </div>
   );
 });

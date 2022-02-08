@@ -1,8 +1,10 @@
 import Link from "next/link";
+import styles from "./Navigation.module.scss";
+
+// icons
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
-import styles from "./Navigation.module.scss";
 
 const NavLinks = (props) => {
   return (

@@ -1,5 +1,6 @@
 import styles from "./About.module.scss";
 
+// components
 import AboutMe from "./AboutMe";
 import Education from "./Education";
 

@@ -9,7 +9,6 @@ const ContactPage = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        // paddingBottom: "-30vh",
       }}
     >
       <ContactForm />

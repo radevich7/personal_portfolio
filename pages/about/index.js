@@ -5,8 +5,7 @@ const DynamicAbout = dynamic(() => import("../../components/about/About"), {
 });
 
 const AboutMe = () => {
-  const [loading, setLoading] = useState(false);
   return <DynamicAbout />;
 };
 
-export default DynamicAbout;
+export default AboutMe;

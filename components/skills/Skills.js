@@ -1,5 +1,8 @@
-import SkillsList from "./SkillsList";
 import styles from "./Skills.module.scss";
+
+// component
+import SkillsList from "./SkillsList";
+
 const Skills = () => {
   return (
     <section className={styles.skills}>
