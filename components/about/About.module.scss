@@ -20,7 +20,6 @@
     &__heading {
       @include heading-1;
       position: relative;
-      // padding-left: 7rem;
 
       &::before {
         @include backgroundStructure;
@@ -36,15 +35,13 @@
     &__photo {
       width: 32rem;
       height: 32rem;
-
-      // background-image: url("../../public/myPhoto.jpeg");
-      // background-position: center; /* Center the image */
-      // background-repeat: no-repeat; /* Do not repeat the image */
-      // background-size: cover; /* Resize the background image to cover the entire container */
       align-self: center;
     }
     &__text {
       padding: 0 5rem;
+      @include respond(phone) {
+        padding: 0 2rem;
+      }
       h2 {
         @include heading-2;
         position: relative;
@@ -76,6 +73,11 @@
         color: var(--color-secondary-dark);
         margin: 2.5rem 0;
         position: relative;
+        @include respond(tab-port) {
+          font-size: 2.2rem;
+          text-align: center;
+        }
+
         &::before {
           @include backgroundStructure;
           content: "< p >";
