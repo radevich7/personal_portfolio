@@ -25,13 +25,13 @@ const PortfolioItem = (props) => {
           </video>
 
           <Link href={props.project.url}>
-            <a className={styles.portfolio__video__link}>
+            <a className={styles.portfolio__video__link} target="_blank">
               <FaExternalLinkSquareAlt />
             </a>
           </Link>
         </div>
         <Link href={props.project.url}>
-          <a className={styles.portfolio__hoverLink}>
+          <a className={styles.portfolio__hoverLink} target="_blank">
             <span>visit</span>
           </a>
         </Link>
