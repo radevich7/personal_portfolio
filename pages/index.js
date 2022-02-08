@@ -1,4 +1,5 @@
 import { Fragment, useEffect } from "react";
+import Head from "next/head";
 import Header from "../components/header/Header";
 import ContactForm from "../components/contactForm/ContactForm";
 import Skills from "../components/skills/Skills";

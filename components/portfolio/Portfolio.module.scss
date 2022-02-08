@@ -9,6 +9,7 @@
     grid-column: 2 / 4;
     font-size: 6rem;
     position: relative;
+
     @include respond(phone) {
       text-align: center;
     }
@@ -28,6 +29,7 @@
     color: var(--color-secondary-dark);
     grid-column: 2 / 3;
     font-size: 2.4rem;
+    font-weight: 300;
     position: relative;
     @include respond(phone) {
       text-align: center;
