@@ -24,12 +24,15 @@
 
     h1 {
       font-size: 7rem;
-
+      @include respond(tab-port) {
+        @include animationDisabled;
+      }
       &:nth-child(1) {
         animation-name: moveInLeft1;
         animation-duration: 1s;
         animation-timing-function: ease-out;
         margin-left: -4.8rem;
+
         &::before {
           content: "< h1 >";
           @include backgroundStructure;

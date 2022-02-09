@@ -27,7 +27,12 @@ const HomePage = () => {
       <div data-aos="fade-up" data-aos-once="true" data-aos-offset="200">
         <Skills />
       </div>
-      <div data-aos="fade-up" data-aos-once="true" data-aos-offset="200">
+      <div
+        data-aos="fade-up"
+        data-aos-once="true"
+        data-aos-offset="200"
+        style={{ paddingBottom: "20vh" }}
+      >
         <ContactForm />
       </div>
     </Fragment>

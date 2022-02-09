@@ -12,12 +12,18 @@ import Navigation from "./Navigation";
 const Layout = (props) => {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
+
+  const postponeLoading = () => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  };
   useEffect(() => {
     const handleStart = (url) => {
-      url !== router.pathname ? setLoading(true) : setLoading(false);
+      url !== router.pathname ? setLoading(true) : postponeLoading();
     };
     const handleComplete = (url) => {
-      setLoading(false);
+      postponeLoading();
     };
 
     router.events.on("routeChangeStart", handleStart);

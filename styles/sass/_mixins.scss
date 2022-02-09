@@ -106,3 +106,12 @@ breakpoint choices
     transform: translate(0);
   }
 }
+
+// disabled animation
+@mixin animationDisabled {
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+  -o-animation: none !important;
+  -ms-animation: none !important;
+  animation: none !important;
+}

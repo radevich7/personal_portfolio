@@ -9,10 +9,13 @@
   position: relative;
   justify-content: center;
   align-content: center;
+
   @include respond(tab-port) {
     grid-template-columns: repeat(1, 1fr);
     align-content: start;
-    margin-top: 9rem;
+    margin-top: 5rem;
+  }
+  @include respond(phone) {
   }
   //   About me
   //   Section with a photo and the detailed explanation
@@ -23,12 +26,18 @@
     }
     @include respond(phone) {
       grid-template-columns: 1fr;
+      text-align: center;
     }
 
     &__heading {
       @include heading-1;
       position: relative;
-
+      @include respond(phone) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2rem;
+      }
       &::before {
         @include backgroundStructure;
         content: "< h2 >";
@@ -42,51 +51,38 @@
     }
 
     &__photoCon {
-      width: 32rem;
-      height: 32rem;
+      width: 100%;
+      height: 100%;
+
+      @include respond(phone) {
+        display: none;
+      }
     }
     &__text {
       padding: 0 5rem;
-      @include respond(land-port) {
-        padding: 0 0;
-      }
+
       @include respond(tab-land) {
+        padding: 0 2rem;
       }
       @include respond(phone) {
         padding: 0 2rem;
+        text-align: center;
       }
 
       h2 {
         @include heading-2;
-        position: relative;
-        display: inline-block;
-        &::before {
-          @include backgroundStructure;
-          content: "< h3 >";
-
-          position: absolute;
-          left: -2.5rem;
-          top: 50%;
-          transform: translate(-50%, -50%);
-        }
-        &::after {
-          @include backgroundStructure;
-          content: "</ h3 >";
-          position: absolute;
-          right: -9rem;
-          top: 50%;
-          transform: translate(-50%, -50%);
-        }
+        font-size: 4rem;
       }
       h4 {
         font-size: 2.2rem;
         font-weight: 300;
+        margin-bottom: 3rem;
       }
 
       p {
         font-size: 1.6rem;
         color: var(--color-secondary-dark);
-        margin: 1rem 0;
+        margin: 0.8rem 0;
         position: relative;
 
         @include respond(tab-port) {
@@ -98,8 +94,8 @@
         content: "< p >";
         @include backgroundStructure;
         position: absolute;
-        left: -3.5rem;
-        top: -2rem;
+        left: 0rem;
+        top: -3rem;
       }
       p:last-child::after {
         content: "< p >";
@@ -156,7 +152,7 @@
       content: "< section >";
       position: absolute;
       top: 0;
-      left: 0;
+      left: 2rem;
     }
     &::after {
       @include backgroundStructure;

@@ -5,11 +5,11 @@ const ContactPage = () => {
   return (
     <div
       style={{
-        height: "100%",
-        width: "100%",
+        height: "100vh",
+        margin: "0 auto",
         display: "flex",
-        justifyContent: "center",
         alignItems: "center",
+        justifyContent: "center",
       }}
     >
       <HeadTitle />
