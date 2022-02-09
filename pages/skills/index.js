@@ -1,5 +1,5 @@
+import HeadTitle from "../../components/reusableComponents/HeadTitle";
 import Skills from "../../components/skills/Skills";
-
 const SkillsPage = () => {
   return (
     <div
@@ -7,6 +7,7 @@ const SkillsPage = () => {
         margin: "15vh auto",
       }}
     >
+      <HeadTitle />
       <Skills />
     </div>
   );

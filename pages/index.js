@@ -1,23 +1,16 @@
 import { Fragment, useEffect } from "react";
 import Head from "next/head";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
+// Components
+import Portfolio from "../components/portfolio/Portfolio";
 import Header from "../components/header/Header";
 import ContactForm from "../components/contactForm/ContactForm";
 import Skills from "../components/skills/Skills";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import dynamic from "next/dynamic";
-import useInView from "react-cool-inview";
-
-const PortfolioDynamic = dynamic(() =>
-  import("../components/portfolio/Portfolio")
-);
-
+import HeadTitle from "../components/reusableComponents/HeadTitle";
 const HomePage = () => {
   // When in view to import the portfolio component
-
-  const { observe, inView } = useInView({
-    onEnter: ({ unobserve }) => unobserve(),
-  });
 
   // fade in effect for different sections on the home page
   useEffect(() => {
@@ -26,42 +19,15 @@ const HomePage = () => {
 
   return (
     <Fragment>
-      <Head>
-        <title>Julian Radevych </title>
-        <meta
-          name="description"
-          content="I'm a Front-End Developer located in Canada. I enjoy coding and solve problems through code. I am passionate about
-            building interactive, eye-catching, accessible applications and
-            digital experiences."
-        />
-
-        {/* FAVICON */}
-
-        <link
-          rel="shortcut icon"
-          href="/favIcon.png"
-          type="image/png"
-          sizes="64x64"
-        />
-      </Head>
+      <HeadTitle />
       <Header />
-      <div
-        data-aos="fade-up"
-        data-aos-once="true"
-        data-aos-offset="200"
-        ref={observe}
-      >
-        {inView && <PortfolioDynamic />}
+      <div data-aos="fade-up" data-aos-once="true" data-aos-offset="200">
+        <Portfolio />
       </div>
-      <div data-aos="fade-up" data-aos-once="true" data-aos-offset="400">
+      <div data-aos="fade-up" data-aos-once="true" data-aos-offset="200">
         <Skills />
       </div>
-      <div
-        style={{ paddingBottom: "25vh" }}
-        data-aos="fade-up"
-        data-aos-once="true"
-        data-aos-offset="400"
-      >
+      <div data-aos="fade-up" data-aos-once="true" data-aos-offset="200">
         <ContactForm />
       </div>
     </Fragment>

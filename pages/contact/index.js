@@ -1,4 +1,5 @@
 import ContactForm from "../../components/contactForm/ContactForm";
+import HeadTitle from "../../components/reusableComponents/HeadTitle";
 
 const ContactPage = () => {
   return (
@@ -11,6 +12,7 @@ const ContactPage = () => {
         alignItems: "center",
       }}
     >
+      <HeadTitle />
       <ContactForm />
     </div>
   );

@@ -1,4 +1,5 @@
 import Portfolio from "../../components/portfolio/Portfolio";
+import HeadTitle from "../../components/reusableComponents/HeadTitle";
 
 const PortfolioPage = () => {
   return (
@@ -7,6 +8,7 @@ const PortfolioPage = () => {
         margin: "10vh auto",
       }}
     >
+      <HeadTitle />
       <Portfolio />
     </div>
   );
