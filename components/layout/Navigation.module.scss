@@ -230,15 +230,20 @@
         top: 0.8rem;
       }
     }
-    &__button:hover &__icon::before {
-      top: -1rem;
-    }
-    &__button:hover &__icon::after {
-      top: 1rem;
-    }
   }
 }
 
+.middleLine {
+  background-color: transparent;
+  &::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  &::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+}
 // // Toggle functionality
 .toggleNav {
   opacity: 1;
