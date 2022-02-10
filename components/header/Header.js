@@ -1,7 +1,9 @@
 import styles from "./Header.module.scss";
 import ScrollTo from "react-scroll-into-view";
+
 // component
 import Button from "../reusableComponents/Button";
+import ParticlesAnimation from "../animation/ParticlesAnimation";
 
 const Header = () => {
   let hello = "Hello,";
@@ -16,6 +18,7 @@ const Header = () => {
   };
   return (
     <header className={styles.header}>
+      <ParticlesAnimation />
       <div className={styles.header__main}>
         <h1>
           {[...hello].map((val, index) => (

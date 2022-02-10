@@ -49,7 +49,7 @@ const NavLinks = (props) => {
         </li>
         {/* Social media links*/}
         <div className={styles.nav__social}>
-          <Link href="https://www.linkedin.com/in/julian-radevych-88a785205/">
+          <Link href="https://www.linkedin.com/in/julian-radevych/">
             <a className={styles.nav__social__link} target="_blank">
               <FaLinkedinIn />
             </a>

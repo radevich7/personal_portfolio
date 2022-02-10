@@ -20,7 +20,9 @@ const HomePage = () => {
   return (
     <Fragment>
       <HeadTitle />
+
       <Header />
+
       <div data-aos="fade-up" data-aos-once="true" data-aos-offset="200">
         <Portfolio />
       </div>
