@@ -18,7 +18,7 @@ const ParticlesAnimation = () => {
         init={particlesInit}
         loaded={particlesLoaded}
         options={{
-          fpsLimit: 100,
+          fpsLimit: 30,
           interactivity: {
             events: {
               onClick: {
@@ -55,8 +55,8 @@ const ParticlesAnimation = () => {
               color: "#ffffff",
               distance: 150,
               enable: true,
-              opacity: 0.5,
-              width: 1,
+              opacity: 0.2,
+              width: 0.5,
             },
             collisions: {
               enable: true,
@@ -66,7 +66,7 @@ const ParticlesAnimation = () => {
               enable: true,
               outMode: "bounce",
               random: false,
-              speed: 3,
+              speed: 1.0,
               straight: false,
             },
             number: {
@@ -74,10 +74,10 @@ const ParticlesAnimation = () => {
                 enable: true,
                 area: 800,
               },
-              value: 80,
+              value: 100,
             },
             opacity: {
-              value: 0.5,
+              value: 0.4,
             },
             shape: {
               type: "circle",
@@ -87,7 +87,7 @@ const ParticlesAnimation = () => {
               value: 5,
             },
           },
-          detectRetina: true,
+          detectRetina: false,
           fullScreen: false,
         }}
       />
