@@ -31,13 +31,13 @@ const CollapseNav = () => {
           open && styles.toggleBack
         }`}
       ></div>
-      <nav
+      <div
         className={`${styles.nav__collapse__navigation} ${
           open && styles.toggleNav
         }`}
       >
-        <NavLinks toggle={toggle} />
-      </nav>
+        {open && <NavLinks toggle={toggle} />}
+      </div>
     </div>
   );
 };

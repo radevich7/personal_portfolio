@@ -7,7 +7,7 @@ import NavLinks from "./NavLinks";
 
 const Navigation = () => {
   return (
-    <div className={styles.nav}>
+    <nav className={styles.nav}>
       {/* FullScreen nav */}
       <div className={styles.nav__fullScreenNav}>
         <div className={styles.nav__logo}>
@@ -22,7 +22,7 @@ const Navigation = () => {
       </div>
       {/* Collapse nav */}
       <CollapseNav />
-    </div>
+    </nav>
   );
 };
 

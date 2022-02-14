@@ -18,21 +18,21 @@ const NavLinks = (props) => {
             </a>
           </Link>
         </li>
-        <li className={styles.nav__list__item}>
+        <li className={`${styles.nav__list__item} `}>
           <Link href="/about">
             <a className={styles.nav__list__link} onClick={props.toggle}>
               About me
             </a>
           </Link>
         </li>
-        <li className={styles.nav__list__item}>
+        <li className={`${styles.nav__list__item} `}>
           <Link href="/skills">
             <a className={styles.nav__list__link} onClick={props.toggle}>
               Skills
             </a>
           </Link>
         </li>
-        <li className={styles.nav__list__item}>
+        <li className={`${styles.nav__list__item} `}>
           <Link href="/portfolio">
             <a className={styles.nav__list__link} onClick={props.toggle}>
               Portfolio
@@ -40,7 +40,7 @@ const NavLinks = (props) => {
           </Link>
         </li>
 
-        <li className={styles.nav__list__item}>
+        <li className={`${styles.nav__list__item} `}>
           <Link href="/contact">
             <a className={styles.nav__list__link} onClick={props.toggle}>
               Contact

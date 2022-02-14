@@ -9,14 +9,14 @@ const ParticlesAnimation = () => {
   };
 
   const particlesLoaded = (container) => {
-    console.log(container);
+    // console.log(container);
   };
   return (
     <div className={styles.particles_wrapper}>
       <Particles
         id="tsparticles"
         init={particlesInit}
-        loaded={particlesLoaded}
+        // loaded={particlesLoaded}
         options={{
           fpsLimit: 30,
           interactivity: {
@@ -59,7 +59,7 @@ const ParticlesAnimation = () => {
               width: 0.5,
             },
             collisions: {
-              enable: true,
+              enable: false,
             },
             move: {
               direction: "none",
