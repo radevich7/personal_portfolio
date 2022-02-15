@@ -13,14 +13,13 @@ const Layout = (props) => {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
-  const postponeLoading = () => {
+  const postponeLoading = () => {};
+  useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 1000);
-  };
-  useEffect(() => {
     const handleStart = (url) => {
-      url !== router.pathname ? setLoading(true) : postponeLoading();
+      url !== router.pathname ? setLoading(true) : setLoading(true);
     };
     const handleComplete = (url) => {
       postponeLoading();

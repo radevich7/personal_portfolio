@@ -17,6 +17,7 @@ const ParticlesAnimation = () => {
         id="tsparticles"
         init={particlesInit}
         // loaded={particlesLoaded}
+        height="80vh"
         options={{
           fpsLimit: 30,
           interactivity: {

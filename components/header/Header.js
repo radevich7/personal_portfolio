@@ -17,7 +17,7 @@ const Header = () => {
     return `${val}_${new Date().getTime()}`;
   };
   return (
-    <header className={styles.header}>
+    <header className={styles.header} id="header">
       <ParticlesAnimation />
       <div className={styles.header__main}>
         <h1>
