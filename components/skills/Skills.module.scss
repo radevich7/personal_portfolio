@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: min-content 1fr;
-  margin: 20vh 7rem;
+  padding: 20vh 7rem;
   column-gap: 5rem;
   row-gap: 8rem;
   justify-content: center;
@@ -12,7 +12,7 @@
   @include respond(tab-land) {
     grid-template-rows: min-content 1fr;
     row-gap: 8rem;
-    margin: 10vh 1rem;
+    padding: 10vh 1rem;
   }
 
   &__heading {

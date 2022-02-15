@@ -18,7 +18,7 @@ const Portfolio = (props, ref) => {
   ];
 
   return (
-    <section className={styles.portfolio} ref={ref}>
+    <section className={styles.portfolio} ref={ref} id="portfolio">
       <h2>Portfolio</h2>
       <p>
         Below you can see some of my projects, that I&lsquo;ve been working

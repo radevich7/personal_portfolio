@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./Navigation.module.scss";
-
+import ScrollTo from "react-scroll-into-view";
 // icons
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
@@ -11,41 +11,34 @@ const NavLinks = (props) => {
     <>
       {/* List of nav links */}
       <ul className={styles.nav__list}>
-        <li className={`${styles.nav__list__item} ${styles.hide__link}`}>
-          <Link href="/">
-            <a className={styles.nav__list__link} onClick={props.toggle}>
-              Home
-            </a>
-          </Link>
-        </li>
         <li className={`${styles.nav__list__item} `}>
-          <Link href="/about">
+          <ScrollTo selector="#about">
             <a className={styles.nav__list__link} onClick={props.toggle}>
               About me
             </a>
-          </Link>
+          </ScrollTo>
         </li>
         <li className={`${styles.nav__list__item} `}>
-          <Link href="/skills">
+          <ScrollTo selector="#skills">
             <a className={styles.nav__list__link} onClick={props.toggle}>
               Skills
             </a>
-          </Link>
+          </ScrollTo>
         </li>
         <li className={`${styles.nav__list__item} `}>
-          <Link href="/portfolio">
+          <ScrollTo selector="#portfolio">
             <a className={styles.nav__list__link} onClick={props.toggle}>
               Portfolio
             </a>
-          </Link>
+          </ScrollTo>
         </li>
 
         <li className={`${styles.nav__list__item} `}>
-          <Link href="/contact">
+          <ScrollTo selector="#contactForm">
             <a className={styles.nav__list__link} onClick={props.toggle}>
               Contact
             </a>
-          </Link>
+          </ScrollTo>
         </li>
         {/* Social media links*/}
         <div className={styles.nav__social}>

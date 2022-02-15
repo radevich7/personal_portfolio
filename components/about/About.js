@@ -6,7 +6,7 @@ import Education from "./Education";
 
 const About = () => {
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id="about">
       <AboutMe />
       <Education />
     </section>

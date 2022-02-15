@@ -5,7 +5,7 @@ import SkillsList from "./SkillsList";
 
 const Skills = () => {
   return (
-    <section className={styles.skills}>
+    <section className={styles.skills} id="skills">
       <h2 className={styles.skills__heading}>Skills</h2>
       <div className={styles.skills__content}>
         <p>

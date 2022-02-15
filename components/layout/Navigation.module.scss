@@ -87,22 +87,24 @@
       text-align: center;
       border-top: 1px solid rgba(174, 254, 255, 0.1);
       padding: 1.2rem;
+      font-size: 2.2rem;
+      cursor: pointer;
 
       &:last-child {
         border-bottom: 1px solid rgba(174, 254, 255, 0.1);
+      }
+      @include respond(tab-port) {
+        font-size: 3rem;
       }
     }
     &__link {
       &:link,
       &:visited {
         display: inline-block;
-        font-size: 2.2rem;
+        cursor: pointer;
         text-decoration: none;
         color: inherit;
         transition: all 0.2s;
-        @include respond(tab-port) {
-          font-size: 3rem;
-        }
       }
 
       &:hover,
@@ -256,10 +258,6 @@
 
 @media (min-width: 56.25em) {
   .nav__collapse {
-    display: none;
-    visibility: hidden;
-  }
-  .hide__link {
     display: none;
     visibility: hidden;
   }

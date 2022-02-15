@@ -9,6 +9,7 @@ import Header from "../components/header/Header";
 import ContactForm from "../components/contactForm/ContactForm";
 import Skills from "../components/skills/Skills";
 import HeadTitle from "../components/reusableComponents/HeadTitle";
+import About from "../components/about/About";
 const HomePage = () => {
   // When in view to import the portfolio component
 
@@ -29,12 +30,10 @@ const HomePage = () => {
       <div data-aos="fade-up" data-aos-once="true" data-aos-offset="200">
         <Skills />
       </div>
-      <div
-        data-aos="fade-up"
-        data-aos-once="true"
-        data-aos-offset="200"
-        style={{ paddingBottom: "20vh" }}
-      >
+      <div data-aos="fade-up" data-aos-once="true" data-aos-offset="200">
+        <About />
+      </div>
+      <div data-aos="fade-up" data-aos-once="true" data-aos-offset="200">
         <ContactForm />
       </div>
     </Fragment>

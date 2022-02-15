@@ -1,6 +1,7 @@
 import styles from "./About.module.scss";
 // component
 import Image from "next/image";
+import { Fragment } from "react";
 
 const AboutMe = () => {
   return (
