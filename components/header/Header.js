@@ -43,7 +43,7 @@ const Header = () => {
           ))}
         </h1>
 
-        <ScrollTo selector="#contactForm">
+        <ScrollTo selector="#contactForm" className={styles.header__main__btn}>
           <Button>Contact me</Button>
         </ScrollTo>
       </div>

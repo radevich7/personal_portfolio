@@ -74,6 +74,8 @@
         animation-iteration-count: 1;
       }
 
+      // Scroll to button
+
       @keyframes rubberBand {
         from {
           transform: scale3d(1, 1, 1);
@@ -117,6 +119,13 @@
         animation-duration: 0.2s;
         animation-timing-function: ease-out;
         animation-delay: 0.5s;
+      }
+    }
+    // Scroll button
+    &__btn {
+      width: 25rem;
+      @include respond(tab-port) {
+        margin: 0 auto;
       }
     }
   }
