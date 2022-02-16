@@ -27,82 +27,84 @@
       @include respond(tab-port) {
         @include animationDisabled;
       }
-      &:nth-child(1) {
-        animation-name: moveInLeft1;
-        animation-duration: 1s;
-        animation-timing-function: ease-out;
-        margin-left: -4.8rem;
+      div {
+        &:nth-child(1) {
+          animation-name: moveInLeft1;
+          animation-duration: 1s;
+          animation-timing-function: ease-out;
+          margin-left: -4.8rem;
 
-        &::before {
-          content: "< h1 >";
-          @include backgroundStructure;
-          padding-right: 1rem;
+          &::before {
+            content: "< h1 >";
+            @include backgroundStructure;
+            padding-right: 1rem;
+          }
         }
-      }
-      &:nth-child(2) {
-        animation-name: moveInRight;
-        animation-duration: 1s;
-        animation-timing-function: ease-out;
-      }
-      &:nth-child(3) {
-        animation-name: moveInLeft3;
-        animation-duration: 1s;
-        animation-timing-function: ease-out;
-      }
-
-      @include respond(phone) {
-        font-size: 4.2rem;
-      }
-      &:last-of-type {
-        margin-bottom: 5rem;
-        position: relative;
-        &::after {
-          content: "</ h1 >";
-          @include backgroundStructure;
-          margin-left: 1.5rem;
+        &:nth-child(2) {
+          animation-name: moveInRight;
+          animation-duration: 1s;
+          animation-timing-function: ease-out;
         }
-      }
-      span {
-        display: inline-block;
-        white-space: pre-wrap;
-      }
-      span:hover {
-        color: var(--color-secondary-light);
-        animation: rubberBand;
-        animation-duration: 0.2s;
-        animation-fill-mode: both;
-        animation-iteration-count: 1;
-      }
-
-      // Scroll to button
-
-      @keyframes rubberBand {
-        from {
-          transform: scale3d(1, 1, 1);
+        &:nth-child(3) {
+          animation-name: moveInLeft3;
+          animation-duration: 1s;
+          animation-timing-function: ease-out;
         }
 
-        30% {
-          transform: scale3d(1.25, 0.75, 1);
+        @include respond(phone) {
+          font-size: 4.2rem;
+        }
+        &:last-of-type {
+          margin-bottom: 5rem;
+          position: relative;
+          &::after {
+            content: "</ h1 >";
+            @include backgroundStructure;
+            margin-left: 1.5rem;
+          }
+        }
+        span {
+          display: inline-block;
+          white-space: pre-wrap;
+        }
+        span:hover {
+          color: var(--color-secondary-light);
+          animation: rubberBand;
+          animation-duration: 0.2s;
+          animation-fill-mode: both;
+          animation-iteration-count: 1;
         }
 
-        40% {
-          transform: scale3d(0.75, 1.25, 1);
-        }
+        // Scroll to button
 
-        50% {
-          transform: scale3d(1.15, 0.85, 1);
-        }
+        @keyframes rubberBand {
+          from {
+            transform: scale3d(1, 1, 1);
+          }
 
-        65% {
-          transform: scale3d(0.95, 1.05, 1);
-        }
+          30% {
+            transform: scale3d(1.25, 0.75, 1);
+          }
 
-        75% {
-          transform: scale3d(1.05, 0.95, 1);
-        }
+          40% {
+            transform: scale3d(0.75, 1.25, 1);
+          }
 
-        to {
-          transform: scale3d(1, 1, 1);
+          50% {
+            transform: scale3d(1.15, 0.85, 1);
+          }
+
+          65% {
+            transform: scale3d(0.95, 1.05, 1);
+          }
+
+          75% {
+            transform: scale3d(1.05, 0.95, 1);
+          }
+
+          to {
+            transform: scale3d(1, 1, 1);
+          }
         }
       }
     }

@@ -6,7 +6,7 @@ import { Fragment } from "react";
 const AboutMe = () => {
   return (
     <div>
-      <h1 className={styles.about__zone__heading}>About me</h1>
+      <h2 className={styles.about__zone__heading}>About me</h2>
       <div className={styles.about__zone}>
         <div className={styles.about__zone__photoCon}>
           <Image
@@ -18,7 +18,7 @@ const AboutMe = () => {
         </div>
 
         <div className={styles.about__zone__text}>
-          <h2>Julian Radevych</h2>
+          <h3>Julian Radevych</h3>
           <h4>Front-End Developer</h4>
           <div>
             <p>

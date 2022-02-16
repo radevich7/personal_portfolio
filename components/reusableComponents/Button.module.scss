@@ -1,27 +1,34 @@
 .btn {
-  color: var(--color-secondary-light);
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
+  &,
+  &:link,
+  &:visited {
+    color: var(--color-secondary-light);
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    padding: 1rem 6rem;
+    display: inline-block;
+    border: 1px solid var(--color-secondary-light);
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
 
-  position: relative;
-  text-decoration: none;
-  padding: 1rem 6rem;
-  display: inline-block;
-  border: 1px solid var(--color-secondary-light);
-  font-size: 1.5rem;
-  font-weight: 600;
-  cursor: pointer;
-
-  background-image: linear-gradient(
-    120deg,
-    transparent 0%,
-    transparent 50%,
-    var(--color-tertiary-light) 50%
-  );
-  background-size: 220%;
-  transition: all 0.4s;
-
+    background-image: linear-gradient(
+      120deg,
+      transparent 0%,
+      transparent 50%,
+      var(--color-tertiary-light) 50%
+    );
+    background-size: 220%;
+    transition: all 0.4s;
+    // button animation
+    animation-name: moveInBottom;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+  }
   &:hover {
     background-position: 100%;
     transform: translateY(-0.3rem);
@@ -29,10 +36,6 @@
   &:active {
     transform: translateY(-1px);
   }
-  // button animation
-  animation-name: moveInBottom;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
 }
 @keyframes moveInBottom {
   0% {
