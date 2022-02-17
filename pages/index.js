@@ -15,7 +15,7 @@ const HomePage = () => {
 
   // fade in effect for different sections on the home page
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 1000 });
   }, []);
 
   return (

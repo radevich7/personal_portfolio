@@ -1,6 +1,6 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useState } from "react";
 import styles from "./Portfolio.module.scss";
-
+import dynamic from "next/dynamic";
 // component
 import PortfolioItem from "./PortfolioItem";
 
