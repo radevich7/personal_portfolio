@@ -1,12 +1,12 @@
-import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Portfolio.module.scss";
 
-// icon
-import { FaExternalLinkSquareAlt } from "react-icons/fa";
-
 const PortfolioItem = (props) => {
+  const redirectHandler = () => {
+    const win = window.open(props.project.url, "_blank");
+    win.focus();
+  };
   return (
     <li className={props.project.style}>
       <div className={styles.portfolio__hoverContent}>
@@ -27,12 +27,6 @@ const PortfolioItem = (props) => {
             <source src={props.project.mp4} type="video/webm" />
             <source src={props.project.webm} type="video/mp4" />
           </video>
-
-          {/* <Link href={props.project.url}>
-            <a className={styles.portfolio__video__link} target="_blank">
-              <FaExternalLinkSquareAlt />
-            </a>
-          </Link> */}
         </div>
         <Link href={props.project.url}>
           <a className={styles.portfolio__hoverLink} target="_blank">
