@@ -75,9 +75,6 @@
   &__image {
     filter: grayscale(20%);
   }
-  &__hoverContent:hover &__image {
-    filter: blur(2px);
-  }
 
   // video element
 
@@ -111,21 +108,6 @@
       transform: scale(1.5);
       transition: all 0.6s;
     }
-
-    &__link {
-      color: var(--color-secondary-dark);
-      font-size: 2rem;
-      position: absolute;
-      text-decoration: none;
-      right: 5%;
-      bottom: 15%;
-
-      z-index: 10000;
-
-      :hover {
-        color: var(--color-tertiary-light);
-      }
-    }
   }
 
   // // // // // // // // //
@@ -156,43 +138,8 @@
     transition: all 0.3s;
     cursor: pointer;
   }
-  &__hoverLink:hover &__hoverContent span {
-    filter: blur(2px);
-  }
-  &__hoverLink {
-    width: 10rem;
-    height: 10rem;
-    display: none;
-    text-decoration: none;
-    font-size: 2rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transition: all 2s;
-    span {
-      display: flex;
-      width: 100%;
-      height: 100%;
-      background-color: var(--color-secondary-dark);
-      color: var(--color-white);
-      border-radius: 50%;
-      justify-content: center;
-      align-items: center;
-      transform: scale(1);
-      transition: all 0.2s;
 
-      &:hover {
-        color: var(--color-secondary-light);
-        transform: scale(1.1);
-      }
-    }
-  }
   &__hoverContent:hover {
     background-color: rgba(7, 34, 39, 0.5);
   }
-  &__hoverContent:hover .portfolio__hoverLink {
-    display: inline-block;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  // image
 }

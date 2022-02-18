@@ -9,14 +9,14 @@ const PortfolioItem = (props) => {
   };
   return (
     <li className={props.project.style}>
-      <div className={styles.portfolio__hoverContent}>
+      <div className={styles.portfolio__hoverContent} onClick={redirectHandler}>
         <Image
           src={props.project.photoUrl}
           layout="fill"
           className={styles.portfolio__image}
           alt="Project's poster"
         />
-        <div className={styles.portfolio__video} onClick={redirectHandler}>
+        <div className={styles.portfolio__video}>
           <video
             className={styles.portfolio__video__content}
             loop
@@ -28,11 +28,6 @@ const PortfolioItem = (props) => {
             <source src={props.project.webm} type="video/mp4" />
           </video>
         </div>
-        <Link href={props.project.url}>
-          <a className={styles.portfolio__hoverLink} target="_blank">
-            <span>visit</span>
-          </a>
-        </Link>
       </div>
     </li>
   );
