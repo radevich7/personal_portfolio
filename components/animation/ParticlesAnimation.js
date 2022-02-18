@@ -3,8 +3,7 @@ import styles from "./../header/Header.module.scss";
 
 const ParticlesAnimation = () => {
   const particlesInit = (main) => {
-    console.log(main);
-
+    // console.log(main);
     // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
   };
 

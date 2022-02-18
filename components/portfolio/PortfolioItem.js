@@ -14,7 +14,6 @@ const PortfolioItem = (props) => {
     const win = window.open(props.project.url, "_blank");
     win.focus();
   };
-  console.log(hovered);
 
   return (
     <li
