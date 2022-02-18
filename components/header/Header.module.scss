@@ -28,7 +28,6 @@
         @include animationDisabled;
       }
       div {
-        width: 100%;
         &:nth-child(1) {
           animation-name: moveInLeft1;
           animation-duration: 1s;
@@ -63,7 +62,6 @@
         }
         &:last-of-type {
           margin-bottom: 5rem;
-          position: relative;
           &::after {
             content: "</ h1 >";
             @include backgroundStructure;
